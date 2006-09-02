@@ -1,0 +1,13 @@
+data attributes
+example           overhead 
+`s#2 2 3 sorted   0 
+`u#2 4 5 unique   16*u 
+`p#2 2 1 parted   (4*u;16*u;4*u+1) 
+`g#2 1 2 grouped  (4*u;16*u;4*u+1;4*n)
+
+The byte overheads use n(number of elements) and u(number of uniques)
+`u is for unique lists.
+`p and `g are for lists with a lot of repetition.
+
+`s#, `u# and `g# are preserved on append in memory (if possible)
+only `s# is preserved on append to disk

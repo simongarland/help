@@ -1,0 +1,28 @@
+assign, define, control and debug
+Dyad------------D-Amend---------Monad-----------M-amend------
+v:y             .[`v;();:;y]
+v+:y            .[`v;();+;y]    v-:             .[`v;();-:]
+v[i]+:y         .[`v;,i;+;y]    v[i]-:          .[`v;,i;-:]
+v[i;j]+:y       .[`v;(i;j);+;y] v[i;j]-:        .[`v;(i;j);-:]
+
+@[v;i;d;y] is .[v;,i;d;y]       @[v;i;m] is .[v;,i;m]
+
+{[a;b;c] ...}   function definition
+ x y z          default parameters
+ d:...          local variable
+ d::..          global variable 
+
+control(debug: ctrl-c stop)
+ $[c;t;f]       conditional
+ ?[c;t;f]       boolean conditional
+ if[c; ... ]
+ do[n; ... ]
+ while[c; ...]
+ / ...          comment
+ : ...          return(resume)
+ ' ...          signal
+
+trap signals with .[f;(x;y;z);v] and @[f;x;v]
+or                .[f;(x;y;z);g] and @[f;x;g] 
+where v is the value to be returned on error 
+or g is a monadic function called with error text
