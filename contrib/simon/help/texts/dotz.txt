@@ -1,0 +1,25 @@
+.z locale contents 
+.z.a       ip-address 
+.z.b       dependencies (more information than \b)
+.z.f       startup file
+.z.h       hostname
+.z.k       kdb+ releasedate 
+.z.K       kdb+ major version
+.z.l       license information (;expirydate;updatedate;;;)
+.z.o       OS 
+.z.pc[h]   close, h handle (already closed)
+.z.pg[x]   get
+.z.ph[x]   http get
+.z.pi[x]   input (qcon)
+.z.po[h]   open, h handle 
+.z.pp[x]   http post
+.z.ps[x]   set
+.z.pw[u;p] validate user and password
+.z.s       self, current function definition
+.z.ts[x]   timer expression (called every \t)
+.z.u       userid 
+.z.vs[v;i] value set
+.z.w       handle (0 for console, handle to remote for KIPC)
+.z.x       command line parameters (argc..)
+.z.z       gmt timestamp
+.z.Z       local timestamp

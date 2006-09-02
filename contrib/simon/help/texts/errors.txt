@@ -1,0 +1,50 @@
+error messages
+runtime errors
+error--------example-----explanation
+access                   attempt to read files above directory, run system commands or failed usr/pwd
+assign       cos:12      attempt to reuse a reserved word
+conn                     too many incoming connections (1022 max)
+domain       !-1         out of domain
+length       ()+!1       incompatible lengths
+limit        0W#2        tried to generate a list longer than 2,000,000,000           
+loop         a::a        dependency loop
+mismatch                 columns that can't be aligned for R,R or K,K 
+Mlim                     more than 999 nested columns in splayed tables
+nyi                      not yet implemented
+os                       operating system error
+pl                       peach can't handle parallel lambda's (2.3 only)
+Q7                       nyi op on file nested array
+rank         +[2;3;4]    invalid rank or valence
+splay                    nyi op on splayed table
+stack        {.z.s[]}[]  ran out of stack space
+stop        	         user interrupt(ctrl-c) or time limit (-T)
+stype        '42         invalid type used to signal
+type         til 2.2     wrong type
+value                    no value
+vd1                      attempted multithread update
+wsfull                   malloc failed. ran out of swap (or addressability on 32bit). or hit -w limit.
+XXX                      value error (XXX undefined) 
+
+system (file and ipc) errors
+XXX:YYY                  XXX is from kdb+, YYY from the OS
+XXX from addr, close, conn, p(from -p), snd, rcv or (invalid) filename (read0`:invalidname.txt)
+
+parse errors (execute or load)
+[/(/{/]/)/}/"            open ([{ or "
+branch                   a branch(if;do;while;$[.;.;.]) more than 255 byte codes away
+char                     invalid character
+constants                too many constants (max 96)
+globals                  too many global variables (32 max)
+locals                   too many local variables (24 max)
+params                   too many parameters (8 max)
+
+license errors
+cpu                      too many cpus 
+exp                      expiry date passed
+host                     unlicensed host
+k4.lic                   k4.lic file not found, check QHOME/QLIC
+os                       unlicensed OS
+srv                      attempt to use client-only license in server mode 
+upd                      attempt to use version of kdb+ more recent than update date
+user                     unlicensed user
+wha                      invalid system date

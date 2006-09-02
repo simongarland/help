@@ -1,0 +1,8 @@
+save/load tables
+tables can be written as a single file or spread across a directory, e.g.
+`:trade set x      / write as single file 
+`:trade/ set x     / write across a directory 
+trade:get`:trade   / read 
+trade:get`:trade/  / map columns on demand
+
+tables splayed across a directory must be fully enumerated(no varchar) and not keyed.
