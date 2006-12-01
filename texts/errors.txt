@@ -5,6 +5,8 @@ access                   attempt to read files above directory, run system comma
 assign       cos:12      attempt to reuse a reserved word
 conn                     too many incoming connections (1022 max)
 domain       !-1         out of domain
+fail         `s#3 2      invalid attempt to set attribute
+glim                     `g# limit, kdb+ currently limited to 99 concurrent `g#'s 
 length       ()+!1       incompatible lengths
 limit        0W#2        tried to generate a list longer than 2,000,000,000           
 loop         a::a        dependency loop
