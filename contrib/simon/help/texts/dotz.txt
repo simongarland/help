@@ -1,8 +1,11 @@
 .z locale contents 
 .z.a       ip-address 
 .z.b       dependencies (more information than \b)
+.z.d       gmt date
+.z.D       local date
 .z.f       startup file
 .z.h       hostname
+.z.i       pid
 .z.k       kdb+ releasedate 
 .z.K       kdb+ major version
 .z.l       license information (;expirydate;updatedate;;;)
@@ -16,6 +19,8 @@
 .z.ps[x]   set
 .z.pw[u;p] validate user and password
 .z.s       self, current function definition
+.z.t       gmt time
+.z.T       local time
 .z.ts[x]   timer expression (called every \t)
 .z.u       userid 
 .z.vs[v;i] value set
