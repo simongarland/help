@@ -2,7 +2,8 @@
 t:-1"kdb+makehelp 0.02 2006.08.17"
 o:.Q.opt .z.x;if[2>count .Q.x;-2">q ",(string .z.f)," SRCDIR SAVEFILE";exit 1]
 SRC:.z.x 0;SAVEFILE:hsym`$.z.x 1
-if[not count F:key hsym`$SRC;F:asc F where(lower F)like "*.txt";-1"? no *.txt files found in <",SRC,">";exit 1]
+F:key hsym`$SRC;F:asc F where(lower F)like "*.txt"
+if[not count F; -1"? no *.txt files found in <",SRC,">"; exit 1]
 t:@[hdel;SAVEFILE;{}]
 SAVEH:neg hopen SAVEFILE
 t:SAVEH"/ help.q ",string .z.z;t:SAVEH"\\d .help";t:SAVEH"DIR:TXT:()!()"
