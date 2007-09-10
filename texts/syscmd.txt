@@ -1,4 +1,6 @@
 system commands
+\1 filename  redirect stdout
+\2 filename  redirect stderr
 \a           tables
 \b           views (see also .z.b)
 \B           invalid dependencies
@@ -8,6 +10,7 @@ system commands
 \e [0|1]     error trap clients
 \f [d]       functions [directory]
 \l [f]       load script (or dir:files splays parts scripts)
+\m old new   unix mv 
 \o [0N]      offset from gmt
 \p [i]       port (0 turns off)
 \P [7]       print digits(0-all)
@@ -20,6 +23,7 @@ system commands
 \w           workspace(used allocated max mapped)
              (max set by -w, 0 => unlimited)
 \W [2]       week offset(sat..fri)
+\x .z.p?     expunge .z.p? value (ie reset to default)
 \z [0]       "D"$ uses mm/dd/yyyy or dd/mm/yyyy
 \cd [d]      O/S directory [go to]
 \[other]     O/S execute

@@ -32,6 +32,8 @@ t    4     19   00:00:00.000  time      time       Time       TimeSpan
            111                f\:
            112                dynamic load
 
+the nested types are 77+t (e.g. 78 is boolean. 96 is time.)
+
 `char$data `CHAR$string
 
 The int, float, char and symbol literal nulls are: 0N 0n " " `.
