@@ -1,10 +1,12 @@
 command line parameters
-q [f] [-b] [-l] [-o N] [-p N] [-P N] [-q] [-r|R :H:P] [-s N] [-t N]
-      [-T N] [-u|U F] [-w N] [-W N] [-z 0|1]
+q [f] [-b] [-c r c] [-C r c][-l] [-o N] [-p N] [-P N] [-q] [-r|R :H:P] 
+      [-s N] [-t N] [-T N] [-u|U F] [-w N] [-W N] [-z 0|1]
 
 f load script (*.q, *.k, *.s), file or directory
 
 -b               block client write access 
+-c r c           console maxRows maxCols
+-C r c           http display maxRows maxCols 
 -l               log updates to filesystem 
 -o N             offset hours (from GMT: affects .z.Z)
 -p N             port kdbc(/jdbc/odbc) http(html xml txt csv)
