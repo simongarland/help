@@ -14,6 +14,7 @@ loop         a::a        dependency loop
 mismatch                 columns that can't be aligned for R,R or K,K 
 Mlim                     more than 999 nested columns in splayed tables
 nyi                      not yet implemented
+noamend                  can't change global state inside an amend
 os                       operating system error
 pl                       peach can't handle parallel lambda's (2.3 only)
 Q7                       nyi op on file nested array
