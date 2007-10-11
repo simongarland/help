@@ -1,4 +1,4 @@
-/ help.q 2007.09.25T11:46:06.840
+/ help.q 2007.10.11T07:57:21.239
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -170,7 +170,6 @@ TXT,:(enlist`errors)!enlist(
  "assign       cos:12      attempt to reuse a reserved word";
  "conn                     too many incoming connections (1022 max)";
  "domain       !-1         out of domain";
- "fail         `s#3 2      invalid attempt to set attribute";
  "glim                     `g# limit, kdb+ currently limited to 99 concurrent `g#'s ";
  "hwr                      handle write error, can't write inside a peach";
  "length       ()+!1       incompatible lengths";
@@ -184,11 +183,13 @@ TXT,:(enlist`errors)!enlist(
  "pl                       peach can't handle parallel lambda's (2.3 only)";
  "Q7                       nyi op on file nested array";
  "rank         +[2;3;4]    invalid rank or valence";
+ "s-fail       `s#2 1      cannot apply `s# to data (not ascending values) ";
  "splay                    nyi op on splayed table";
  "stack        {.z.s[]}[]  ran out of stack space";
  "stop        \t         user interrupt(ctrl-c) or time limit (-T)";
  "stype        '42         invalid type used to signal";
  "type         til 2.2     wrong type";
+ "u-fail       `u#1 1      cannot apply `u# to data (not unique values)";
  "value                    no value";
  "vd1                      attempted multithread update";
  "wsfull                   malloc failed. ran out of swap (or addressability on 32bit). or hit -w limit.";
