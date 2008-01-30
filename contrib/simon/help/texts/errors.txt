@@ -3,6 +3,7 @@ runtime errors
 error--------example-----explanation
 access                   attempt to read files above directory, run system commands or failed usr/pwd
 assign       cos:12      attempt to reuse a reserved word
+cast         `sym$`xxx   attempt to enumerate invalid value (`xxx not in sym in example) 
 conn                     too many incoming connections (1022 max)
 domain       !-1         out of domain
 glim                     `g# limit, kdb+ currently limited to 99 concurrent `g#'s 
