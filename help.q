@@ -1,4 +1,4 @@
-/ help.q 2007.10.11T07:57:21.239
+/ help.q 2008.01.30T13:10:43.888
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -168,6 +168,7 @@ TXT,:(enlist`errors)!enlist(
  "error--------example-----explanation";
  "access                   attempt to read files above directory, run system commands or failed usr/pwd";
  "assign       cos:12      attempt to reuse a reserved word";
+ "cast         `sym$`xxx   attempt to enumerate invalid value (`xxx not in sym in example) ";
  "conn                     too many incoming connections (1022 max)";
  "domain       !-1         out of domain";
  "glim                     `g# limit, kdb+ currently limited to 99 concurrent `g#'s ";
