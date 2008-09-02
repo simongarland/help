@@ -1,4 +1,4 @@
-/ help.q 2008.04.07T09:26:43.309
+/ help.q 2008.09.02T12:14:27.095
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -170,13 +170,14 @@ TXT,:(enlist`errors)!enlist(
  "assign       cos:12      attempt to reuse a reserved word";
  "cast         `sym$`xxx   attempt to enumerate invalid value (`xxx not in sym in example) ";
  "conn                     too many incoming connections (1022 max)";
- "d8                       the log had a partial transaction at the end but q couldn't truncate the file.(maybe no write access)";
+ "d8                       the log had a partial transaction at the end but q couldn't truncate the file.(maybe no wri..;
  "domain       !-1         out of domain";
+ "elim                     more than 57 distinct enumerations ";
  "glim                     `g# limit, kdb+ currently limited to 99 concurrent `g#'s ";
  "hwr                      handle write error, can't write inside a peach";
  "length       ()+!1       incompatible lengths";
  "limit        0W#2        tried to generate a list longer than 2,000,000,000           ";
- "loop         a::a        dependency loop";
+ "loop         a::a        dependency or transitive closure loop";
  "mismatch                 columns that can't be aligned for R,R or K,K ";
  "Mlim                     more than 999 nested columns in splayed tables";
  "nyi                      not yet implemented";
