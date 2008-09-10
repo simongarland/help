@@ -1,4 +1,4 @@
-/ help.q 2008.09.02T12:14:27.095
+/ help.q 2008.09.10T13:57:38.181
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -170,7 +170,7 @@ TXT,:(enlist`errors)!enlist(
  "assign       cos:12      attempt to reuse a reserved word";
  "cast         `sym$`xxx   attempt to enumerate invalid value (`xxx not in sym in example) ";
  "conn                     too many incoming connections (1022 max)";
- "d8                       the log had a partial transaction at the end but q couldn't truncate the file.(maybe no wri..;
+ "d8                       the log had a partial transaction at the end but q couldn't truncate the file.";
  "domain       !-1         out of domain";
  "elim                     more than 57 distinct enumerations ";
  "glim                     `g# limit, kdb+ currently limited to 99 concurrent `g#'s ";
@@ -191,6 +191,7 @@ TXT,:(enlist`errors)!enlist(
  "stack        {.z.s[]}[]  ran out of stack space";
  "stop        \t         user interrupt(ctrl-c) or time limit (-T)";
  "stype        '42         invalid type used to signal";
+ "trunc                    the log had a partial transaction at the end but q couldn't truncate the file.";
  "type         til 2.2     wrong type";
  "u-fail       `u#1 1      cannot apply `u# to data (not unique values)";
  "value                    no value";
