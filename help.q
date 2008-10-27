@@ -1,4 +1,4 @@
-/ help.q 2008.09.10T13:57:38.181
+/ help.q 2008.10.27T10:17:59.920
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -246,10 +246,10 @@ TXT,:(enlist`syscmd)!enlist(
  "\\e [0|1]     error trap clients";
  "\\f [d]       functions [directory]";
  "\\l [f]       load script (or dir:files splays parts scripts)";
- "\\m old new   unix mv ";
  "\\o [0N]      offset from gmt";
  "\\p [i]       port (0 turns off)";
  "\\P [7]       print digits(0-all)";
+ "\\r old new   unix mv ";
  "\\s [i]       number of slaves ";
  "\\S [-314159] seed";
  "\\t [i]       timer [x] milliseconds (1st fire after delay)";
