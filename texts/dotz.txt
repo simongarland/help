@@ -3,6 +3,7 @@
 .z.b       dependencies (more information than \b)
 .z.d       gmt date
 .z.D       local date
+.z.exit    callback on exit 
 .z.f       startup file
 .z.h       hostname
 .z.i       pid
@@ -18,6 +19,7 @@
 .z.pp[x]   http post
 .z.ps[x]   set
 .z.pw[u;p] validate user and password
+.z.q       in quiet mode (no console)
 .z.s       self, current function definition
 .z.t       gmt time
 .z.T       local time
