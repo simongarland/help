@@ -26,6 +26,7 @@ system commands
 \x .z.p?     expunge .z.p? value (ie reset to default)
 \z [0]       "D"$ uses mm/dd/yyyy or dd/mm/yyyy
 \cd [d]      O/S directory [go to]
+\_           is readonly (cmdline -b)
 \[other]     O/S execute
 \\           exit
 \            (escape suspension, or switch language mode)
