@@ -1,4 +1,4 @@
-/ help.q 2008.10.27T10:17:59.920
+/ help.q 2008.12.16T13:41:40.915
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -136,6 +136,7 @@ TXT,:(enlist`dotz)!enlist(
  ".z.b       dependencies (more information than \\b)";
  ".z.d       gmt date";
  ".z.D       local date";
+ ".z.exit    callback on exit ";
  ".z.f       startup file";
  ".z.h       hostname";
  ".z.i       pid";
@@ -151,6 +152,7 @@ TXT,:(enlist`dotz)!enlist(
  ".z.pp[x]   http post";
  ".z.ps[x]   set";
  ".z.pw[u;p] validate user and password";
+ ".z.q       in quiet mode (no console)";
  ".z.s       self, current function definition";
  ".z.t       gmt time";
  ".z.T       local time";
@@ -250,7 +252,7 @@ TXT,:(enlist`syscmd)!enlist(
  "\\p [i]       port (0 turns off)";
  "\\P [7]       print digits(0-all)";
  "\\r old new   unix mv ";
- "\\s [i]       number of slaves ";
+ "\\s           number of slaves (query only) ";
  "\\S [-314159] seed";
  "\\t [i]       timer [x] milliseconds (1st fire after delay)";
  "\\t expr      time expression ";
