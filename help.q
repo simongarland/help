@@ -1,4 +1,4 @@
-/ help.q 2008.12.16T13:41:40.915
+/ help.q 2008.12.16T14:52:51.663
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -264,6 +264,7 @@ TXT,:(enlist`syscmd)!enlist(
  "\\x .z.p?     expunge .z.p? value (ie reset to default)";
  "\\z [0]       \"D\"$ uses mm/dd/yyyy or dd/mm/yyyy";
  "\\cd [d]      O/S directory [go to]";
+ "\\_           is readonly (cmdline -b)";
  "\\[other]     O/S execute";
  "\\\\           exit";
  "\\            (escape suspension, or switch language mode)";
