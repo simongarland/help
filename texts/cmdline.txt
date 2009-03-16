@@ -1,5 +1,5 @@
 command line parameters
-q [f] [-b] [-c r c] [-C r c][-l] [-o N] [-p N] [-P N] [-q] [-r|R :H:P] 
+q [f] [-b] [-c r c] [-C r c] [-l] [-L][-o N] [-p N] [-P N] [-q] [-r :H:P] 
       [-s N] [-t N] [-T N] [-u|U F] [-w N] [-W N] [-z 0|1]
 
 f load script (*.q, *.k, *.s), file or directory
@@ -8,13 +8,13 @@ f load script (*.q, *.k, *.s), file or directory
 -c r c           console maxRows maxCols
 -C r c           http display maxRows maxCols 
 -l               log updates to filesystem 
+-L               as -l, but sync logging
 -o N             offset hours (from GMT: affects .z.Z)
 -p N             port kdbc(/jdbc/odbc) http(html xml txt csv)
 -p -N            port multithreaded kdbc
 -P N             printdigits, default 7, 0=>all
 -q               quiet, no startup banner text
 -r :H:P          replicate from :host:port 
--R :H:P          as -r, but sync
 -s N             slaves for parallel execution
 -t N             timer milliseconds
 -T N             timeout seconds(applies to all client queries)
