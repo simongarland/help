@@ -19,6 +19,7 @@ system commands
 \t [i]       timer [x] milliseconds (1st fire after delay)
 \t expr      time expression 
 \T [i]       timeout [x] seconds 
+\u           reload the user:pswd file specified with -u
 \v [d]       variables [directory]
 \w           workspace(used allocated max mapped)
              (max set by -w, 0 => unlimited)

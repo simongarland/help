@@ -1,0 +1,4 @@
+#!/bin/sh
+ 
+q makehelp.q texts help.q
+cp help.q ~/q
