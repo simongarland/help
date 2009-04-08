@@ -1,4 +1,4 @@
-/ help.q 2009.03.18T08:57:45.851
+/ help.q 2009.04.08T07:42:02.060
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -48,6 +48,7 @@ TXT,:(enlist`cmdline)!enlist(
  "-t N             timer milliseconds";
  "-T N             timeout seconds(applies to all client queries)";
  "-u F             usr:pwd file, no access above start directory";
+ "-u 1             disable system escapes";
  "-U F             as -u, but no file restrictions";
  "-w N             workspace MB limit (default: 2*RAM)";
  "-W N             week offset, default 2, 0=>saturday";

@@ -19,6 +19,7 @@ f load script (*.q, *.k, *.s), file or directory
 -t N             timer milliseconds
 -T N             timeout seconds(applies to all client queries)
 -u F             usr:pwd file, no access above start directory
+-u 1             disable system escapes
 -U F             as -u, but no file restrictions
 -w N             workspace MB limit (default: 2*RAM)
 -W N             week offset, default 2, 0=>saturday
