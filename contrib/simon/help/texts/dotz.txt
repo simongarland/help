@@ -27,6 +27,7 @@
 .z.u       userid 
 .z.vs[v;i] value set
 .z.w       handle (0 for console, handle to remote for KIPC)
+.z.W       openHandles!bytesInBuffer
 .z.x       command line parameters (argc..)
 .z.z       gmt timestamp
 .z.Z       local timestamp
