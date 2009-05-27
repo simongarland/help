@@ -1,4 +1,4 @@
-/ help.q 2009.05.27T07:36:15.416
+/ help.q 2009.05.27T08:01:22.464
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -161,6 +161,7 @@ TXT,:(enlist`dotz)!enlist(
  ".z.u       userid ";
  ".z.vs[v;i] value set";
  ".z.w       handle (0 for console, handle to remote for KIPC)";
+ ".z.W       openHandles!bytesInBuffer";
  ".z.x       command line parameters (argc..)";
  ".z.z       gmt timestamp";
  ".z.Z       local timestamp"
