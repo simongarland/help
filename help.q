@@ -1,4 +1,4 @@
-/ help.q 2009.04.08T07:42:02.060
+/ help.q 2009.05.27T07:36:15.416
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -267,6 +267,7 @@ TXT,:(enlist`syscmd)!enlist(
  "\\z [0]       \"D\"$ uses mm/dd/yyyy or dd/mm/yyyy";
  "\\cd [d]      O/S directory [go to]";
  "\\_           is readonly (cmdline -b)";
+ "\\_ f.q       create runtime script f.q_ from f.q (or f.k_ from f.k) ";
  "\\[other]     O/S execute";
  "\\\\           exit";
  "\\            (escape suspension, or switch language mode)";

@@ -28,6 +28,7 @@ system commands
 \z [0]       "D"$ uses mm/dd/yyyy or dd/mm/yyyy
 \cd [d]      O/S directory [go to]
 \_           is readonly (cmdline -b)
+\_ f.q       create runtime script f.q_ from f.q (or f.k_ from f.k) 
 \[other]     O/S execute
 \\           exit
 \            (escape suspension, or switch language mode)
