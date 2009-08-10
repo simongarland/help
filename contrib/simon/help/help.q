@@ -1,4 +1,4 @@
-/ help.q 2009.05.27T08:01:22.464
+/ help.q 2009.08.10T08:19:51.422
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -56,38 +56,40 @@ TXT,:(enlist`cmdline)!enlist(
  )
 DIR,:(enlist`cmdline)!enlist`$"command line parameters"
 TXT,:(enlist`data)!enlist(
- "char-size--type-literal-------q---------sql--------java-------.net---  ";
- "b    1     1    0b            boolean              Boolean    boolean   ";
- "x    1     4    0x0           byte                 Byte       byte      ";
- "h    2     5    0h            short     smallint   Short      int16     ";
- "i    4     6    0             int       int        Integer    int32     ";
- "j    8     7    0j            long      bigint     Long       int64     ";
- "e    4     8    0e            real      real       Float      single    ";
- "f    8     9    0.0           float     float      Double     double    ";
- "c    1     10   \" \"           char                 Character  char";
- "s    .     11   `             symbol    varchar    String     string    ";
- "m    4     13   2000.01m      month";
- "d    4     14   2000.01.01    date      date       Date                 ";
- "z    8     15   dateTtime     datetime  timestamp  Timestamp  DateTime  ";
- "u    4     17   00:00         minute";
- "v    4     18   00:00:00      second";
- "t    4     19   00:00:00.000  time      time       Time       TimeSpan ";
- "*    4     20.. `s$`          enum";
- "           98                 table";
- "           99                 dict";
- "           100                lambda";
- "           101                unary prim";
- "           102                binary prim";
- "           103                ternary(operator)";
- "           104                projection";
- "           105                composition";
- "           106                f'";
- "           107                f/";
- "           108                f\\";
- "           109                f':";
- "           110                f/:";
- "           111                f\\:";
- "           112                dynamic load";
+ "char-size--type-literal------------q---------sql--------java-------.net---  ";
+ "b    1     1    0b                 boolean              Boolean    boolean   ";
+ "x    1     4    0x0                byte                 Byte       byte      ";
+ "h    2     5    0h                 short     smallint   Short      int16     ";
+ "i    4     6    0                  int       int        Integer    int32     ";
+ "j    8     7    0j                 long      bigint     Long       int64     ";
+ "e    4     8    0e                 real      real       Float      single    ";
+ "f    8     9    0.0                float     float      Double     double    ";
+ "c    1     10   \" \"                char                 Character  char";
+ "s    .     11   `                  symbol    varchar    String     string    ";
+ "p    8     12   dateDtimespan      timestamp";
+ "m    4     13   2000.01m           month";
+ "d    4     14   2000.01.01         date      date       Date                 ";
+ "z    8     15   dateTtime          datetime  timestamp  Timestamp  DateTime";
+ "n    8     16   00:00:00.000000000 timespan";
+ "u    4     17   00:00              minute";
+ "v    4     18   00:00:00           second";
+ "t    4     19   00:00:00.000       time      time       Time       TimeSpan ";
+ "*    4     20.. `s$`               enum";
+ "           98                      table";
+ "           99                      dict";
+ "           100                     lambda";
+ "           101                     unary prim";
+ "           102                     binary prim";
+ "           103                     ternary(operator)";
+ "           104                     projection";
+ "           105                     composition";
+ "           106                     f'";
+ "           107                     f/";
+ "           108                     f\\";
+ "           109                     f':";
+ "           110                     f/:";
+ "           111                     f\\:";
+ "           112                     dynamic load";
  "";
  "the nested types are 77+t (e.g. 78 is boolean. 96 is time.)";
  "";
@@ -135,7 +137,7 @@ DIR,:(enlist`define)!enlist`$"assign, define, control and debug"
 TXT,:(enlist`dotz)!enlist(
  ".z.a       ip-address ";
  ".z.b       dependencies (more information than \\b)";
- ".z.d       gmt date";
+ ".z.d       utc date";
  ".z.D       local date";
  ".z.exit    callback on exit ";
  ".z.f       startup file";
@@ -144,7 +146,11 @@ TXT,:(enlist`dotz)!enlist(
  ".z.k       kdb+ releasedate ";
  ".z.K       kdb+ major version";
  ".z.l       license information (;expirydate;updatedate;;;)";
+ ".z.n       utc timespan ";
+ ".z.N       local timespan";
  ".z.o       OS ";
+ ".z.p       utc timetamp";
+ ".z.P       local timetamp ";
  ".z.pc[h]   close, h handle (already closed)";
  ".z.pg[x]   get";
  ".z.ph[x]   http get";
@@ -155,15 +161,15 @@ TXT,:(enlist`dotz)!enlist(
  ".z.pw[u;p] validate user and password";
  ".z.q       in quiet mode (no console)";
  ".z.s       self, current function definition";
- ".z.t       gmt time";
+ ".z.t       utc time";
  ".z.T       local time";
  ".z.ts[x]   timer expression (called every \\t)";
  ".z.u       userid ";
  ".z.vs[v;i] value set";
  ".z.w       handle (0 for console, handle to remote for KIPC)";
- ".z.W       openHandles!bytesInBuffer";
+ ".z.W       openHandles!vectorOfMessageSizes (oldest first)";
  ".z.x       command line parameters (argc..)";
- ".z.z       gmt timestamp";
+ ".z.z       utc timestamp";
  ".z.Z       local timestamp"
  )
 DIR,:(enlist`dotz)!enlist`$".z locale contents "
@@ -261,7 +267,7 @@ TXT,:(enlist`syscmd)!enlist(
  "\\T [i]       timeout [x] seconds ";
  "\\u           reload the user:pswd file specified with -u";
  "\\v [d]       variables [directory]";
- "\\w           workspace(used allocated max mapped)";
+ "\\w           workspace(M0 sum of allocs from M1 bytes;M1 mapped anon MB;M2 peak of M1;M3 mapped files bytes)";
  "             (max set by -w, 0 => unlimited)";
  "\\W [2]       week offset(sat..fri)";
  "\\x .z.p?     expunge .z.p? value (ie reset to default)";

@@ -1,7 +1,7 @@
 .z locale contents 
 .z.a       ip-address 
 .z.b       dependencies (more information than \b)
-.z.d       gmt date
+.z.d       utc date
 .z.D       local date
 .z.exit    callback on exit 
 .z.f       startup file
@@ -10,7 +10,11 @@
 .z.k       kdb+ releasedate 
 .z.K       kdb+ major version
 .z.l       license information (;expirydate;updatedate;;;)
+.z.n       utc timespan 
+.z.N       local timespan
 .z.o       OS 
+.z.p       utc timetamp
+.z.P       local timetamp 
 .z.pc[h]   close, h handle (already closed)
 .z.pg[x]   get
 .z.ph[x]   http get
@@ -21,13 +25,13 @@
 .z.pw[u;p] validate user and password
 .z.q       in quiet mode (no console)
 .z.s       self, current function definition
-.z.t       gmt time
+.z.t       utc time
 .z.T       local time
 .z.ts[x]   timer expression (called every \t)
 .z.u       userid 
 .z.vs[v;i] value set
 .z.w       handle (0 for console, handle to remote for KIPC)
-.z.W       openHandles!bytesInBuffer
+.z.W       openHandles!vectorOfMessageSizes (oldest first)
 .z.x       command line parameters (argc..)
-.z.z       gmt timestamp
+.z.z       utc timestamp
 .z.Z       local timestamp
