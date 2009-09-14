@@ -2,6 +2,7 @@ error messages
 runtime errors
 error--------example-----explanation
 access                   attempt to read files above directory, run system commands or failed usr/pwd
+arch                     attempt to load file of wrong endian format
 assign       cos:12      attempt to reuse a reserved word
 cast         `sym$`xxx   attempt to enumerate invalid value (`xxx not in sym in example) 
 conn                     too many incoming connections (1022 max)
@@ -29,6 +30,7 @@ stype        '42         invalid type used to signal
 trunc                    the log had a partial transaction at the end but q couldn't truncate the file.
 type         til 2.2     wrong type
 u-fail       `u#1 1      cannot apply `u# to data (not unique values)
+unmappable               when saving partitioned data, each column must be mappable
 value                    no value
 vd1                      attempted multithread update
 wsfull                   malloc failed. ran out of swap (or addressability on 32bit). or hit -w limit.
@@ -48,7 +50,7 @@ locals                   too many local variables (24 max)
 params                   too many parameters (8 max)
 
 license errors
-cpu                      too many cpus 
+core                     too many cores
 exp                      expiry date passed
 host                     unlicensed host
 k4.lic                   k4.lic file not found, check QHOME/QLIC
