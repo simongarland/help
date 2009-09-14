@@ -21,8 +21,9 @@ system commands
 \T [i]       timeout [x] seconds 
 \u           reload the user:pswd file specified with -u
 \v [d]       variables [directory]
-\w           workspace(M0 sum of allocs from M1 bytes;M1 mapped anon MB;M2 peak of M1;M3 mapped files bytes)
-             (max set by -w, 0 => unlimited)
+\w           workspace(M0 sum of allocs from M1 bytes;M1 mapped anon bytes;M2 peak of M1;M3 mapped files bytes)
+             (max set by -w, 0 => unlimited) - see .Q.w[]
+\w 0         count symbols defined, symbol space used (bytes)
 \W [2]       week offset(sat..fri)
 \x .z.p?     expunge .z.p? value (ie reset to default)
 \z [0]       "D"$ uses mm/dd/yyyy or dd/mm/yyyy

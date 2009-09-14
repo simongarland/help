@@ -1,4 +1,4 @@
-/ help.q 2009.08.10T08:19:51.422
+/ help.q 2009.09.14T13:34:10.094
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -177,6 +177,7 @@ TXT,:(enlist`errors)!enlist(
  "runtime errors";
  "error--------example-----explanation";
  "access                   attempt to read files above directory, run system commands or failed usr/pwd";
+ "arch                     attempt to load file of wrong endian format";
  "assign       cos:12      attempt to reuse a reserved word";
  "cast         `sym$`xxx   attempt to enumerate invalid value (`xxx not in sym in example) ";
  "conn                     too many incoming connections (1022 max)";
@@ -204,6 +205,7 @@ TXT,:(enlist`errors)!enlist(
  "trunc                    the log had a partial transaction at the end but q couldn't truncate the file.";
  "type         til 2.2     wrong type";
  "u-fail       `u#1 1      cannot apply `u# to data (not unique values)";
+ "unmappable               when saving partitioned data, each column must be mappable";
  "value                    no value";
  "vd1                      attempted multithread update";
  "wsfull                   malloc failed. ran out of swap (or addressability on 32bit). or hit -w limit.";
@@ -223,7 +225,7 @@ TXT,:(enlist`errors)!enlist(
  "params                   too many parameters (8 max)";
  "";
  "license errors";
- "cpu                      too many cpus ";
+ "core                     too many cores";
  "exp                      expiry date passed";
  "host                     unlicensed host";
  "k4.lic                   k4.lic file not found, check QHOME/QLIC";
@@ -267,8 +269,9 @@ TXT,:(enlist`syscmd)!enlist(
  "\\T [i]       timeout [x] seconds ";
  "\\u           reload the user:pswd file specified with -u";
  "\\v [d]       variables [directory]";
- "\\w           workspace(M0 sum of allocs from M1 bytes;M1 mapped anon MB;M2 peak of M1;M3 mapped files bytes)";
- "             (max set by -w, 0 => unlimited)";
+ "\\w           workspace(M0 sum of allocs from M1 bytes;M1 mapped anon bytes;M2 peak of M1;M3 mapped files bytes)";
+ "             (max set by -w, 0 => unlimited) - see .Q.w[]";
+ "\\w 0         count symbols defined, symbol space used (bytes)";
  "\\W [2]       week offset(sat..fri)";
  "\\x .z.p?     expunge .z.p? value (ie reset to default)";
  "\\z [0]       \"D\"$ uses mm/dd/yyyy or dd/mm/yyyy";
