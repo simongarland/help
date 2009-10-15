@@ -2,6 +2,7 @@ error messages
 runtime errors
 error--------example-----explanation
 access                   attempt to read files above directory, run system commands or failed usr/pwd
+accp                     tried to accept an incoming tcp/ip connection but failed to do so
 arch                     attempt to load file of wrong endian format
 assign       cos:12      attempt to reuse a reserved word
 cast         `sym$`xxx   attempt to enumerate invalid value (`xxx not in sym in example) 

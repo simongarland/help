@@ -1,4 +1,4 @@
-/ help.q 2009.09.14T13:34:10.094
+/ help.q 2009.10.15T12:30:18.011
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -177,6 +177,7 @@ TXT,:(enlist`errors)!enlist(
  "runtime errors";
  "error--------example-----explanation";
  "access                   attempt to read files above directory, run system commands or failed usr/pwd";
+ "accp                     tried to accept an incoming tcp/ip connection but failed to do so";
  "arch                     attempt to load file of wrong endian format";
  "assign       cos:12      attempt to reuse a reserved word";
  "cast         `sym$`xxx   attempt to enumerate invalid value (`xxx not in sym in example) ";
