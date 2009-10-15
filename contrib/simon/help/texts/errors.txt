@@ -5,11 +5,13 @@ access                   attempt to read files above directory, run system comma
 accp                     tried to accept an incoming tcp/ip connection but failed to do so
 arch                     attempt to load file of wrong endian format
 assign       cos:12      attempt to reuse a reserved word
+badtail                  incomplete transaction at end of logfile, get good (count;length) with -11!(-2;`:file)
 cast         `sym$`xxx   attempt to enumerate invalid value (`xxx not in sym in example) 
 conn                     too many incoming connections (1022 max)
 d8                       the log had a partial transaction at the end but q couldn't truncate the file.
 domain       !-1         out of domain
 elim                     more than 57 distinct enumerations 
+from         select a b  badly formed select statement
 glim                     `g# limit, kdb+ currently limited to 99 concurrent `g#'s 
 hwr                      handle write error, can't write inside a peach
 length       ()+!1       incompatible lengths
@@ -19,7 +21,10 @@ mismatch                 columns that can't be aligned for R,R or K,K
 Mlim                     more than 999 nested columns in splayed tables
 nyi                      not yet implemented
 noamend                  can't change global state inside an amend
+noupdate                 update not allowed when using negative port number
 os                       operating system error
+parse                    invalid syntax
+part                     something wrong with the partitions in the hdb
 pl                       peach can't handle parallel lambda's (2.3 only)
 Q7                       nyi op on file nested array
 rank         +[2;3;4]    invalid rank or valence
@@ -34,6 +39,7 @@ u-fail       `u#1 1      cannot apply `u# to data (not unique values)
 unmappable               when saving partitioned data, each column must be mappable
 value                    no value
 vd1                      attempted multithread update
+view                     trying to re-assign a view to something else
 wsfull                   malloc failed. ran out of swap (or addressability on 32bit). or hit -w limit.
 XXX                      value error (XXX undefined) 
 
