@@ -1,4 +1,4 @@
-/ help.q 2009.11.05T20:46:14.157
+/ help.q 2009.12.14T19:10:19.306
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -292,22 +292,22 @@ TXT,:(enlist`syscmd)!enlist(
  )
 DIR,:(enlist`syscmd)!enlist`$"system commands"
 TXT,:(enlist`temporal)!enlist(
- "`timestamp$x ~ 2009.11.05D20:39:35.614334000 ~\302\240\"p\"$x ~\302\240x.timestamp";
- "`datetime$x ~ 2009.11.05T20:39:35.614 ~\302\240\"z\"$x ~\302\240x.datetime";
- "`year$x ~ 2009 ~\302\240x.year";
- "`month$x ~ 2009.11m ~\302\240\"m\"$x ~\302\240x.month";
- "`mm$`date$x ~ 11 ~\302\240x.mm";
- "`week$x ~ 2009.11.02 ~\302\240x.week";
- "`date$x ~ 2009.11.05 ~\302\240\"d\"$x ~\302\240x.date";
- "`dd$x ~ 5 ~\302\240x.dd";
- "`hh$x ~ 20 ~\302\240x.hh";
- "`minute$x ~ 20:39 ~\302\240\"u\"$x ~\302\240x.minute";
- "`mm$`time$x ~ 39 ~\302\240x.mm";
- "`uu$x ~ 39 ~\302\240x.uu";
- "`second$x ~ 20:39:35 ~\302\240\"v\"$x ~\302\240x.second";
- "`ss$x ~ 35 ~\302\240x.ss";
- "`time$x ~ 20:39:35.614 ~\302\240\"t\"$x ~\302\240x.time";
- "`timespan$x ~ 0D20:39:35.614334000 ~\302\240\"n\"$x ~\302\240x.timespan"
+ "`timestamp$x ~ 2009.11.05D20:39:35.614334000 ~ \"p\"$x ~ x.timestamp";
+ "`datetime$x ~ 2009.11.05T20:39:35.614 ~ \"z\"$x ~ x.datetime";
+ "`year$x ~ 2009 ~ x.year";
+ "`month$x ~ 2009.11m ~ \"m\"$x ~ x.month";
+ "`mm$`date$x ~ 11 ~ x.mm";
+ "`week$x ~ 2009.11.02 ~ x.week";
+ "`date$x ~ 2009.11.05 ~ \"d\"$x ~ x.date";
+ "`dd$x ~ 5 ~ x.dd";
+ "`hh$x ~ 20 ~ x.hh";
+ "`minute$x ~ 20:39 ~ \"u\"$x ~ x.minute";
+ "`mm$`time$x ~ 39 ~ x.mm";
+ "`uu$x ~ 39 ~ x.uu";
+ "`second$x ~ 20:39:35 ~ \"v\"$x ~ x.second";
+ "`ss$x ~ 35 ~ x.ss";
+ "`time$x ~ 20:39:35.614 ~ \"t\"$x ~ x.time";
+ "`timespan$x ~ 0D20:39:35.614334000 ~ \"n\"$x ~ x.timespan"
  )
 DIR,:(enlist`temporal)!enlist`$"temporal - date & time casts"
 TXT,:(enlist`verbs)!enlist(
