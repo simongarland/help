@@ -1,17 +1,17 @@
 temporal - date & time casts
-`timestamp$x ~ 2009.11.05D20:39:35.614334000 ~ "p"$x ~ x.timestamp
-`datetime$x ~ 2009.11.05T20:39:35.614 ~ "z"$x ~ x.datetime
-`year$x ~ 2009 ~ x.year
-`month$x ~ 2009.11m ~ "m"$x ~ x.month
-`mm$`date$x ~ 11 ~ x.mm
-`week$x ~ 2009.11.02 ~ x.week
-`date$x ~ 2009.11.05 ~ "d"$x ~ x.date
-`dd$x ~ 5 ~ x.dd
-`hh$x ~ 20 ~ x.hh
-`minute$x ~ 20:39 ~ "u"$x ~ x.minute
-`mm$`time$x ~ 39 ~ x.mm
-`uu$x ~ 39 ~ x.uu
-`second$x ~ 20:39:35 ~ "v"$x ~ x.second
-`ss$x ~ 35 ~ x.ss
-`time$x ~ 20:39:35.614 ~ "t"$x ~ x.time
-`timespan$x ~ 0D20:39:35.614334000 ~ "n"$x ~ x.timespan
+`timestamp$x ~ 2009.11.05D20:39:35.614334000 ~ "p"$x ~ x.timestamp
+`datetime$x ~ 2009.11.05T20:39:35.614 ~ "z"$x ~ x.datetime
+`year$x ~ 2009 ~ x.year
+`month$x ~ 2009.11m ~ "m"$x ~ x.month
+`mm$`date$x ~ 11 ~ x.mm
+`week$x ~ 2009.11.02 ~ x.week
+`date$x ~ 2009.11.05 ~ "d"$x ~ x.date
+`dd$x ~ 5 ~ x.dd
+`hh$x ~ 20 ~ x.hh
+`minute$x ~ 20:39 ~ "u"$x ~ x.minute
+`mm$`time$x ~ 39 ~ x.mm
+`uu$x ~ 39 ~ x.uu
+`second$x ~ 20:39:35 ~ "v"$x ~ x.second
+`ss$x ~ 35 ~ x.ss
+`time$x ~ 20:39:35.614 ~ "t"$x ~ x.time
+`timespan$x ~ 0D20:39:35.614334000 ~ "n"$x ~ x.timespan
