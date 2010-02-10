@@ -1,4 +1,4 @@
-/ help.q 2009.12.14T19:10:19.306
+/ help.q 2010.02.10T12:23:09.345
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -203,6 +203,7 @@ TXT,:(enlist`errors)!enlist(
  "pl                       peach can't handle parallel lambda's (2.3 only)";
  "Q7                       nyi op on file nested array";
  "rank         +[2;3;4]    invalid rank or valence";
+ "rb                       encountered a problem whilst doing a blocking read";
  "s-fail       `s#2 1      cannot apply `s# to data (not ascending values) ";
  "splay                    nyi op on splayed table";
  "stack        {.z.s[]}[]  ran out of stack space";
