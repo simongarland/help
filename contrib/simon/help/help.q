@@ -1,4 +1,4 @@
-/ help.q 2010.02.10T12:23:09.345
+/ help.q 2010.06.28T13:53:03.863
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -189,6 +189,7 @@ TXT,:(enlist`errors)!enlist(
  "from         select a b  badly formed select statement";
  "glim                     `g# limit, kdb+ currently limited to 99 concurrent `g#'s ";
  "hwr                      handle write error, can't write inside a peach";
+ "insert                   attempt to insert a record with a key that already exists ";
  "length       ()+!1       incompatible lengths";
  "limit        0W#2        tried to generate a list longer than 2,000,000,000           ";
  "loop         a::a        dependency or transitive closure loop";
