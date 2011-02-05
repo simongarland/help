@@ -1,4 +1,4 @@
-/ help.q 2010.06.28T13:53:03.863
+/ help.q 2011.02.05T09:37:34.915
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -28,14 +28,15 @@ TXT,:(enlist`attributes)!enlist(
  )
 DIR,:(enlist`attributes)!enlist`$"data attributes"
 TXT,:(enlist`cmdline)!enlist(
- "q [f] [-b] [-c r c] [-C r c] [-l] [-L][-o N] [-p N] [-P N] [-q] [-r :H:P] ";
- "      [-s N] [-t N] [-T N] [-u|U F] [-w N] [-W N] [-z 0|1]";
+ "q [f] [-b] [-c r c] [-C r c] [-g 0|1] [-l] [-L][-o N] [-p N] [-P N] [-q]";
+ "      [-r :H:P] [-s N] [-t N] [-T N] [-u|U F] [-w N] [-W N] [-z 0|1]";
  "";
  "f load script (*.q, *.k, *.s), file or directory";
  "";
  "-b               block client write access ";
  "-c r c           console maxRows maxCols";
  "-C r c           http display maxRows maxCols ";
+ "-g 1             enable immediate garbage collect";
  "-l               log updates to filesystem ";
  "-L               as -l, but sync logging";
  "-o N             offset hours (from GMT: affects .z.Z)";
