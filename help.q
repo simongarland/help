@@ -1,4 +1,4 @@
-/ help.q 2011.02.05T09:37:34.915
+/ help.q 2011.06.07T13:21:29.672
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -100,9 +100,12 @@ TXT,:(enlist`data)!enlist(
  "The rest use type extensions, e.g. 0Nd. No null for boolean or byte.";
  "0Wd 0Wz 0Wt  placeholder infinite dates/times/datetimes (no math)";
  "";
- "date.(year month week mm dd)";
  "dict:`a`b!.. table:([]x:..;y:..) or +`x`y!..";
- "time.(minute second mm ss) milliseconds=time mod 1000"
+ "date.(datetime dd mm month timestamp uu week year) / .z.d";
+ "datetime.(date dd hh minute mm month second ss time timespan timestamp uu week year) / .z.z";
+ "time.(hh minute mm second ss timespan uu) milliseconds=time mod 1000 / .z.t";
+ "timespan.(hh minute mm second ss time uu) / .z.n";
+ "timestamp.(date datetime dd hh minute mm month second ss time timespan uu week year) / .z.p"
  )
 DIR,:(enlist`data)!enlist`$"data types"
 TXT,:(enlist`define)!enlist(
