@@ -1,4 +1,4 @@
-/ help.q 2011.06.07T13:21:29.672
+/ help.q 2011.06.07T13:44:00.971
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -57,40 +57,40 @@ TXT,:(enlist`cmdline)!enlist(
  )
 DIR,:(enlist`cmdline)!enlist`$"command line parameters"
 TXT,:(enlist`data)!enlist(
- "char-size--type-literal------------q---------sql--------java-------.net---  ";
- "b    1     1    0b                 boolean              Boolean    boolean   ";
- "x    1     4    0x0                byte                 Byte       byte      ";
- "h    2     5    0h                 short     smallint   Short      int16     ";
- "i    4     6    0                  int       int        Integer    int32     ";
- "j    8     7    0j                 long      bigint     Long       int64     ";
- "e    4     8    0e                 real      real       Float      single    ";
- "f    8     9    0.0                float     float      Double     double    ";
- "c    1     10   \" \"                char                 Character  char";
- "s    .     11   `                  symbol    varchar    String     string    ";
- "p    8     12   dateDtimespan      timestamp";
- "m    4     13   2000.01m           month";
- "d    4     14   2000.01.01         date      date       Date                 ";
- "z    8     15   dateTtime          datetime  timestamp  Timestamp  DateTime";
- "n    8     16   00:00:00.000000000 timespan";
- "u    4     17   00:00              minute";
- "v    4     18   00:00:00           second";
- "t    4     19   00:00:00.000       time      time       Time       TimeSpan ";
- "*    4     20.. `s$`               enum";
- "           98                      table";
- "           99                      dict";
- "           100                     lambda";
- "           101                     unary prim";
- "           102                     binary prim";
- "           103                     ternary(operator)";
- "           104                     projection";
- "           105                     composition";
- "           106                     f'";
- "           107                     f/";
- "           108                     f\\";
- "           109                     f':";
- "           110                     f/:";
- "           111                     f\\:";
- "           112                     dynamic load";
+ "char-size--type-literal--------------q---------sql--------java-------.net---  ";
+ "b    1     1    0b                   boolean              Boolean    boolean   ";
+ "x    1     4    0x0                  byte                 Byte       byte      ";
+ "h    2     5    0h                   short     smallint   Short      int16     ";
+ "i    4     6    0                    int       int        Integer    int32     ";
+ "j    8     7    0j                   long      bigint     Long       int64     ";
+ "e    4     8    0e                   real      real       Float      single    ";
+ "f    8     9    0.0                  float     float      Double     double    ";
+ "c    1     10   \" \"                  char                 Character  char";
+ "s    .     11   `                    symbol    varchar    String     string    ";
+ "p    8     12   dateDtimespan        timestamp";
+ "m    4     13   2000.01m             month";
+ "d    4     14   2000.01.01           date      date       Date                 ";
+ "z    8     15   dateTtime            datetime  timestamp  Timestamp  DateTime";
+ "n    8     16   0D00:00:00.000000000 timespan";
+ "u    4     17   00:00                minute";
+ "v    4     18   00:00:00             second";
+ "t    4     19   00:00:00.000         time      time       Time       TimeSpan ";
+ "*    4     20.. `s$`                 enum";
+ "           98                        table";
+ "           99                        dict";
+ "           100                       lambda";
+ "           101                       unary prim";
+ "           102                       binary prim";
+ "           103                       ternary(operator)";
+ "           104                       projection";
+ "           105                       composition";
+ "           106                       f'";
+ "           107                       f/";
+ "           108                       f\\";
+ "           109                       f':";
+ "           110                       f/:";
+ "           111                       f\\:";
+ "           112                       dynamic load";
  "";
  "the nested types are 77+t (e.g. 78 is boolean. 96 is time.)";
  "";
