@@ -9,6 +9,7 @@ system commands
 \d [d]       q directory [go to]
 \e [0|1]     error trap clients
 \f [d]       functions [directory]
+\g [0|1]     garbage collection mode 
 \l [f]       load script (or dir:files splays parts scripts)
 \o [0N]      offset from gmt
 \p [i]       port (0 turns off)
