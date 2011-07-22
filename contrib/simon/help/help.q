@@ -1,4 +1,4 @@
-/ help.q 2011.06.07T13:44:00.971
+/ help.q 2011.07.22T14:32:08.421
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -270,6 +270,7 @@ TXT,:(enlist`syscmd)!enlist(
  "\\d [d]       q directory [go to]";
  "\\e [0|1]     error trap clients";
  "\\f [d]       functions [directory]";
+ "\\g [0|1]     garbage collection mode ";
  "\\l [f]       load script (or dir:files splays parts scripts)";
  "\\o [0N]      offset from gmt";
  "\\p [i]       port (0 turns off)";
