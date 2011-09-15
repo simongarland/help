@@ -1,4 +1,4 @@
-/ help.q 2011.07.22T14:32:08.421
+/ help.q 2011.09.15T08:26:51.511
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -212,6 +212,7 @@ TXT,:(enlist`errors)!enlist(
  "s-fail       `s#2 1      cannot apply `s# to data (not ascending values) ";
  "splay                    nyi op on splayed table";
  "stack        {.z.s[]}[]  ran out of stack space";
+ "step                     attempt to upsert into stepped (`s#) dictionary ";
  "stop        \t         user interrupt(ctrl-c) or time limit (-T)";
  "stype        '42         invalid type used to signal";
  "trunc                    the log had a partial transaction at the end but q couldn't truncate the file.";

@@ -33,6 +33,7 @@ rb                       encountered a problem whilst doing a blocking read
 s-fail       `s#2 1      cannot apply `s# to data (not ascending values) 
 splay                    nyi op on splayed table
 stack        {.z.s[]}[]  ran out of stack space
+step                     attempt to upsert into stepped (`s#) dictionary 
 stop        	         user interrupt(ctrl-c) or time limit (-T)
 stype        '42         invalid type used to signal
 trunc                    the log had a partial transaction at the end but q couldn't truncate the file.
