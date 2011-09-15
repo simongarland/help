@@ -1,4 +1,4 @@
-/ help.q 2011.09.15T08:26:51.511
+/ help.q 2011.09.15T15:13:47.656
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -142,6 +142,7 @@ TXT,:(enlist`dotz)!enlist(
  ".z.a       ip-address ";
  ".z.b       dependencies (more information than \\b)";
  ".z.d       utc date";
+ ".z.c       physical core count";
  ".z.D       local date";
  ".z.exit    callback on exit ";
  ".z.f       startup file";
