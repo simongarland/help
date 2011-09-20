@@ -1,5 +1,6 @@
 .z locale contents 
 .z.a       ip-address 
+.z.ac      http authenticate from cookie 
 .z.b       dependencies (more information than \b)
 .z.d       utc date
 .z.c       physical core count
