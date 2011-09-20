@@ -1,4 +1,4 @@
-/ help.q 2011.09.15T15:13:47.656
+/ help.q 2011.09.20T15:45:08.541
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -140,6 +140,7 @@ TXT,:(enlist`define)!enlist(
 DIR,:(enlist`define)!enlist`$"assign, define, control and debug"
 TXT,:(enlist`dotz)!enlist(
  ".z.a       ip-address ";
+ ".z.ac      http authenticate from cookie ";
  ".z.b       dependencies (more information than \\b)";
  ".z.d       utc date";
  ".z.c       physical core count";
@@ -251,6 +252,36 @@ TXT,:(enlist`errors)!enlist(
  "wha                      invalid system date"
  )
 DIR,:(enlist`errors)!enlist`$"error messages"
+TXT,:(enlist`negbang)!enlist(
+ "n----wrapper----------------------------";
+ " 0N!         tee, output and return x";
+ " -1! hsym    handle from sym x - ensures prefixed with :";
+ " -2! attr    attributes of x";
+ " -3! .Q.s1   display x";
+ " -4!         tokens in string x";
+ " -5! parse   parse tree for string x ";
+ " -6! eval    evaluate parse tree x ";
+ " -7! hcount  size of file x (handle count)";
+ " -8!         byte representation of x";
+ " -9!         k value from byte representation x ";
+ "-10!         resolve type number x to enum";
+ "-11!         streaming execute file x";
+ " -11!logfile      streaming execute of entire logfile";
+ " -11!(n;logfile)  streaming execute of first n cells in logfile";
+ " -11!(-2;logfile) count cells in logfile";
+ "-12! .Q.host hostname from address x (.z.a)";
+ "-13! .Q.attr address from hostname x";
+ "-14!         escape \" in string x (for csvs)";
+ "-15! md5     md5 for string x";
+ "-16!         reference count for x";
+ "-17!         read0 kdb+ file x from \"other\" endian ";
+ "-18!         compressed version of -8!";
+ "-19!         compress file x";
+ "-20! .Q.gc   garbage collect";
+ "-21!         compression information for file x";
+ "-22!         shortcut for count -8!x "
+ )
+DIR,:(enlist`negbang)!enlist`$"negative bang - -n!x - system calls"
 TXT,:(enlist`save)!enlist(
  "tables can be written as a single file or spread across a directory, e.g.";
  "`:trade set x      / write as single file ";
