@@ -1,4 +1,4 @@
-/ help.q 2011.09.20T15:45:08.541
+/ help.q 2011.09.22T12:47:43.548
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -253,7 +253,7 @@ TXT,:(enlist`errors)!enlist(
  )
 DIR,:(enlist`errors)!enlist`$"error messages"
 TXT,:(enlist`negbang)!enlist(
- "n----wrapper----------------------------";
+ "n----wrapper---------------------------------------------------";
  " 0N!         tee, output and return x";
  " -1! hsym    handle from sym x - ensures prefixed with :";
  " -2! attr    attributes of x";
@@ -268,7 +268,7 @@ TXT,:(enlist`negbang)!enlist(
  "-11!         streaming execute file x";
  " -11!logfile      streaming execute of entire logfile";
  " -11!(n;logfile)  streaming execute of first n cells in logfile";
- " -11!(-2;logfile) count cells in logfile";
+ " -11!(-2;logfile) count valid cells in logfile";
  "-12! .Q.host hostname from address x (.z.a)";
  "-13! .Q.attr address from hostname x";
  "-14!         escape \" in string x (for csvs)";
