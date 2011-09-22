@@ -1,5 +1,5 @@
 negative bang - -n!x - system calls
-n----wrapper----------------------------
+n----wrapper---------------------------------------------------
  0N!         tee, output and return x
  -1! hsym    handle from sym x - ensures prefixed with :
  -2! attr    attributes of x
@@ -14,7 +14,7 @@ n----wrapper----------------------------
 -11!         streaming execute file x
  -11!logfile      streaming execute of entire logfile
  -11!(n;logfile)  streaming execute of first n cells in logfile
- -11!(-2;logfile) count cells in logfile
+ -11!(-2;logfile) count valid cells in logfile
 -12! .Q.host hostname from address x (.z.a)
 -13! .Q.attr address from hostname x
 -14!         escape " in string x (for csvs)
