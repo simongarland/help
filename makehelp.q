@@ -5,6 +5,7 @@ SRC:.z.x 0;SAVEFILE:hsym`$.z.x 1
 F:key hsym`$SRC;F:asc F where(lower F)like "*.txt"
 if[not count F; -1"? no *.txt files found in <",SRC,">"; exit 1]
 t:@[hdel;SAVEFILE;{}]
+\c 9999 9999
 SAVEH:neg hopen SAVEFILE
 t:SAVEH"/ help.q ",string .z.z;t:SAVEH"\\d .help";t:SAVEH"DIR:TXT:()!()"
 t:SAVEH"display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,\"*\";-1 each TXT[(key DIR)[i]];show DIR];}"
