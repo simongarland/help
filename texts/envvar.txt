@@ -1,8 +1,8 @@
 envvar - environment variables 
-var---default---use------------------
+var---default---use-------------------------------------------------
 QHOME $HOME/q   folder searched for q.k and unqualified script names
 QLIC  $QHOME    folder searched for k4.lic license file 
-QINIT q.q     additional file loaded after q.k has initialised
+QINIT q.q       additional file loaded after q.k has initialised
 
 LINES           supplied by OS, used to set \c
 COLUMNS         \c $LINES $COLUMNS
