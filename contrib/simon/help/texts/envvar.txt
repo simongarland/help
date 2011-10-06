@@ -1,0 +1,14 @@
+envvar - environment variables 
+var---default---use------------------
+QHOME $HOME/q   folder searched for q.k and unqualified script names
+QLIC  $QHOME    folder searched for k4.lic license file 
+QINIT q.q     additional file loaded after q.k has initialised
+
+LINES           supplied by OS, used to set \c
+COLUMNS         \c $LINES $COLUMNS
+make sure LINES and COLUMNS are exported. In bash:
+export LINES COLUMNS
+before starting q
+
+getenv`VARNAME
+`VARNAME setenv "NEWVALUE"
