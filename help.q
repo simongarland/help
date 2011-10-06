@@ -1,4 +1,4 @@
-/ help.q 2011.09.22T12:47:43.548
+/ help.q 2011.10.06T14:53:52.907
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -179,6 +179,22 @@ TXT,:(enlist`dotz)!enlist(
  ".z.Z       local timestamp"
  )
 DIR,:(enlist`dotz)!enlist`$".z locale contents "
+TXT,:(enlist`envvar)!enlist(
+ "var---default---use------------------";
+ "QHOME $HOME/q   folder searched for q.k and unqualified script names";
+ "QLIC  $QHOME    folder searched for k4.lic license file ";
+ "QINIT q.q     additional file loaded after q.k has initialised";
+ "";
+ "LINES           supplied by OS, used to set \\c";
+ "COLUMNS         \\c $LINES $COLUMNS";
+ "make sure LINES and COLUMNS are exported. In bash:";
+ "export LINES COLUMNS";
+ "before starting q";
+ "";
+ "getenv`VARNAME";
+ "`VARNAME setenv \"NEWVALUE\""
+ )
+DIR,:(enlist`envvar)!enlist`$"envvar - environment variables "
 TXT,:(enlist`errors)!enlist(
  "runtime errors";
  "error--------example-----explanation";
