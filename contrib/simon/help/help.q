@@ -1,4 +1,4 @@
-/ help.q 2011.10.06T14:53:52.907
+/ help.q 2011.10.06T15:15:41.102
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -180,10 +180,10 @@ TXT,:(enlist`dotz)!enlist(
  )
 DIR,:(enlist`dotz)!enlist`$".z locale contents "
 TXT,:(enlist`envvar)!enlist(
- "var---default---use------------------";
+ "var---default---use-------------------------------------------------";
  "QHOME $HOME/q   folder searched for q.k and unqualified script names";
  "QLIC  $QHOME    folder searched for k4.lic license file ";
- "QINIT q.q     additional file loaded after q.k has initialised";
+ "QINIT q.q       additional file loaded after q.k has initialised";
  "";
  "LINES           supplied by OS, used to set \\c";
  "COLUMNS         \\c $LINES $COLUMNS";
