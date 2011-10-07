@@ -1,5 +1,5 @@
 negative bang - -n!x - system calls
-n----wrapper---------------------------------------------------
+n----wrapper-----------------------------------------------------------
  0N!         tee, output and return x
  -1! hsym    handle from sym x - ensures prefixed with :
  -2! attr    attributes of x
@@ -22,7 +22,7 @@ n----wrapper---------------------------------------------------
 -16!         reference count for x
 -17!         read0 kdb+ file x from "other" endian 
 -18!         compressed version of -8!
--19!         compress file x
+-19!         compress file (`:infile;`:outfile;blockSize;algo;zipLevel)
 -20! .Q.gc   garbage collect
 -21!         compression information for file x
 -22!         shortcut for count -8!x 

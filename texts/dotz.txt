@@ -36,4 +36,5 @@
 .z.W       openHandles!vectorOfMessageSizes (oldest first)
 .z.x       command line parameters (argc..)
 .z.z       utc timestamp
+.z.zd      default compression for set (blockSize;algo;zipLevel)
 .z.Z       local timestamp

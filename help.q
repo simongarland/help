@@ -1,4 +1,4 @@
-/ help.q 2011.10.06T15:15:41.102
+/ help.q 2011.10.07T12:21:08.522
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -176,6 +176,7 @@ TXT,:(enlist`dotz)!enlist(
  ".z.W       openHandles!vectorOfMessageSizes (oldest first)";
  ".z.x       command line parameters (argc..)";
  ".z.z       utc timestamp";
+ ".z.zd      default compression for set (blockSize;algo;zipLevel)";
  ".z.Z       local timestamp"
  )
 DIR,:(enlist`dotz)!enlist`$".z locale contents "
@@ -269,7 +270,7 @@ TXT,:(enlist`errors)!enlist(
  )
 DIR,:(enlist`errors)!enlist`$"error messages"
 TXT,:(enlist`negbang)!enlist(
- "n----wrapper---------------------------------------------------";
+ "n----wrapper-----------------------------------------------------------";
  " 0N!         tee, output and return x";
  " -1! hsym    handle from sym x - ensures prefixed with :";
  " -2! attr    attributes of x";
@@ -292,7 +293,7 @@ TXT,:(enlist`negbang)!enlist(
  "-16!         reference count for x";
  "-17!         read0 kdb+ file x from \"other\" endian ";
  "-18!         compressed version of -8!";
- "-19!         compress file x";
+ "-19!         compress file (`:infile;`:outfile;blockSize;algo;zipLevel)";
  "-20! .Q.gc   garbage collect";
  "-21!         compression information for file x";
  "-22!         shortcut for count -8!x "
