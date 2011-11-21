@@ -26,7 +26,7 @@ system commands
              (max set by -w, 0 => unlimited) - see .Q.w[]
 \w 0         count symbols defined, symbol space used (bytes)
 \W [2]       week offset(sat..fri)
-\x .z.p?     expunge .z.p? value (ie reset to default)
+\x .z.p?     expunge .z.zd or .z.p? value (ie reset to default)
 \z [0]       "D"$ uses mm/dd/yyyy or dd/mm/yyyy
 \cd [d]      O/S directory [go to]
 \_           is readonly (cmdline -b)
