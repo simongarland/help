@@ -1,4 +1,4 @@
-/ help.q 2011.11.21T10:11:34.213
+/ help.q 2011.12.09T14:25:26.597
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -333,8 +333,9 @@ TXT,:(enlist`syscmd)!enlist(
  "\\T [i]       timeout [x] seconds ";
  "\\u           reload the user:pswd file specified with -u";
  "\\v [d]       variables [directory]";
- "\\w           workspace(M0 sum of allocs from M1 bytes;M1 mapped anon bytes;M2 peak of M1;M3 mapped files bytes)";
- "             (max set by -w, 0 => unlimited) - see .Q.w[]";
+ "\\w           workspace (bytes allocated; available bytes in heap; max heap so far;";
+ "                        max bytes available; mapped bytes; physical memory)";
+ "             (max bytes set by -w, 0 => unlimited) - see .Q.w[]";
  "\\w 0         count symbols defined, symbol space used (bytes)";
  "\\W [2]       week offset(sat..fri)";
  "\\x .z.p?     expunge .z.zd or .z.p? value (ie reset to default)";
