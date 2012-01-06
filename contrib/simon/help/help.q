@@ -1,4 +1,4 @@
-/ help.q 2011.12.09T14:25:26.597
+/ help.q 2012.01.06T09:04:36.631
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -269,6 +269,25 @@ TXT,:(enlist`errors)!enlist(
  "wha                      invalid system date"
  )
 DIR,:(enlist`errors)!enlist`$"error messages"
+TXT,:(enlist`ipc)!enlist(
+ "hsym x        / prefix : to a symbol if required";
+ "h:hopen port  / open a connection to another q session (with timeout NNN ms)";
+ "        `::port";
+ "        `:host:port";
+ "        `:host:port:user:pswd";
+ "        (`:host:port[:user:pswd];NNN)";
+ "hclose h      / close a connection to another q session";
+ "";
+ "h x and neg[h]x - x is any valid argument to <value>";
+ "h x           / sync message send AND block until response message received";
+ "neg[h] x      / queue an async message for sending";
+ "h\"\"           / sends an empty char vector request AND blocks until response message received";
+ "neg[h][]      / blocks until all data pending to be sent on h has been written into the socket";
+ "h[] or h(::)  / flushes outgoing AND blocks until any message received";
+ "";
+ "within a .z.p? callback .z.a, .z.u and .z.w refer to the CLIENT"
+ )
+DIR,:(enlist`ipc)!enlist`$"ipc handles"
 TXT,:(enlist`negbang)!enlist(
  "n----wrapper-----------------------------------------------------------";
  " 0N!         tee, output and return x";
