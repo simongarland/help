@@ -1,4 +1,4 @@
-/ help.q 2012.05.08T13:23:23.343
+/ help.q 2012.05.08T13:26:46.897
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -258,7 +258,7 @@ TXT,:(enlist`errors)!enlist(
  "params                   too many parameters (8 max)";
  "";
  "license errors";
- "core                     too many cores";
+ "cores                    too many cores";
  "exp                      expiry date passed";
  "host                     unlicensed host";
  "k4.lic                   k4.lic file not found, check QHOME/QLIC";
