@@ -1,0 +1,10 @@
+licenses - kdb+ license files 
+The locations for the license file k4.lic are:
+    the q directory 
+    the directory pointed to by the env var QHOME
+    the directory pointed to by the env var QLIC
+
+license errors, see help`errors
+
+licadmin@kx.com deals with license questions
+failover@kx.com can provide a temporary emergency license 
