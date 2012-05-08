@@ -1,4 +1,4 @@
-/ help.q 2012.01.06T09:04:36.631
+/ help.q 2012.05.08T13:23:23.343
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -288,6 +288,18 @@ TXT,:(enlist`ipc)!enlist(
  "within a .z.p? callback .z.a, .z.u and .z.w refer to the CLIENT"
  )
 DIR,:(enlist`ipc)!enlist`$"ipc handles"
+TXT,:(enlist`lic)!enlist(
+ "The locations for the license file k4.lic are:";
+ "    the q directory ";
+ "    the directory pointed to by the env var QHOME";
+ "    the directory pointed to by the env var QLIC";
+ "";
+ "license errors, see help`errors";
+ "";
+ "licadmin@kx.com deals with license questions";
+ "failover@kx.com can provide a temporary emergency license "
+ )
+DIR,:(enlist`lic)!enlist`$"licenses - kdb+ license files "
 TXT,:(enlist`negbang)!enlist(
  "n----wrapper-----------------------------------------------------------";
  " 0N!         tee, output and return x";
