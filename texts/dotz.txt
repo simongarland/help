@@ -34,6 +34,7 @@
 .z.u       userid 
 .z.vs[v;i] value set
 .z.w       handle (0 for console, handle to remote for KIPC)
+.z.ws[x]   callback for websockets 
 .z.W       openHandles!vectorOfMessageSizes (oldest first)
 .z.x       command line parameters (argc..)
 .z.z       utc timestamp

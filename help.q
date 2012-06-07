@@ -1,4 +1,4 @@
-/ help.q 2012.06.07T06:26:12.198
+/ help.q 2012.06.07T06:44:23.364
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -175,6 +175,7 @@ TXT,:(enlist`dotz)!enlist(
  ".z.u       userid ";
  ".z.vs[v;i] value set";
  ".z.w       handle (0 for console, handle to remote for KIPC)";
+ ".z.ws[x]   callback for websockets ";
  ".z.W       openHandles!vectorOfMessageSizes (oldest first)";
  ".z.x       command line parameters (argc..)";
  ".z.z       utc timestamp";
