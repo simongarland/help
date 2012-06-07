@@ -2,8 +2,9 @@
 .z.a       ip-address 
 .z.ac      http authenticate from cookie 
 .z.b       dependencies (more information than \b)
-.z.d       utc date
+.z.bm      callback on bad message
 .z.c       physical core count
+.z.d       utc date
 .z.D       local date
 .z.exit    callback on exit 
 .z.f       startup file
