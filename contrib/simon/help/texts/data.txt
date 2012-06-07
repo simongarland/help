@@ -1,6 +1,7 @@
 data types
 char-size--type-literal--------------q---------sql--------java-------.net---  
 b    1     1    0b                   boolean              Boolean    boolean   
+g    16    2    0Ng                  guid                 UUID       GUID
 x    1     4    0x0                  byte                 Byte       byte      
 h    2     5    0h                   short     smallint   Short      int16     
 i    4     6    0                    int       int        Integer    int32     

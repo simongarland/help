@@ -17,7 +17,7 @@ i#l  take     #l count
 i_l  drop     _a floor    sc(lower)
 x~x  match    ~a not      ~s(hdelete)
 l!l  xkey     !d key      !i (s;();S):!s
-A?a  find     ?l distinct rand([n]?bxhijefcs)
+A?a  find     ?l distinct rand([n]?bgxhijefcs)
 x@i  at   s@  @x type          trap amend(:+-*%&|,)
 x.l  dot  s.  .d value    .sCL trap dmend(:+-*%&|,)
 A bin a;a in A;a within(a;a);sC like C;sC ss sC

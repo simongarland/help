@@ -1,4 +1,4 @@
-/ help.q 2012.05.08T13:26:46.897
+/ help.q 2012.06.07T06:26:12.198
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -59,6 +59,7 @@ DIR,:(enlist`cmdline)!enlist`$"command line parameters"
 TXT,:(enlist`data)!enlist(
  "char-size--type-literal--------------q---------sql--------java-------.net---  ";
  "b    1     1    0b                   boolean              Boolean    boolean   ";
+ "g    16    2    0Ng                  guid                 UUID       GUID";
  "x    1     4    0x0                  byte                 Byte       byte      ";
  "h    2     5    0h                   short     smallint   Short      int16     ";
  "i    4     6    0                    int       int        Integer    int32     ";
@@ -142,8 +143,9 @@ TXT,:(enlist`dotz)!enlist(
  ".z.a       ip-address ";
  ".z.ac      http authenticate from cookie ";
  ".z.b       dependencies (more information than \\b)";
- ".z.d       utc date";
+ ".z.bm      callback on bad message";
  ".z.c       physical core count";
+ ".z.d       utc date";
  ".z.D       local date";
  ".z.exit    callback on exit ";
  ".z.f       startup file";
@@ -343,34 +345,36 @@ DIR,:(enlist`save)!enlist`$"save/load tables"
 TXT,:(enlist`syscmd)!enlist(
  "\\1 filename  redirect stdout";
  "\\2 filename  redirect stderr";
- "\\a           tables";
+ "\\a [n]       tables [namespace]";
  "\\b           views (see also .z.b)";
- "\\B           invalid dependencies";
+ "\\B           invalid/pending dependencies";
  "\\c [23 79]   console height,width";
  "\\C [36 2000] browser height,width";
- "\\d [d]       q directory [go to]";
+ "\\d [n]       q namespace/directory [go to]";
  "\\e [0|1]     error trap clients";
- "\\f [d]       functions [directory]";
+ "\\f [n]       functions [namespace]";
  "\\g [0|1]     garbage collection mode ";
  "\\l [f]       load script (or dir:files splays parts scripts)";
- "\\o [0N]      offset from gmt";
+ "\\o [N]      offset from gmt";
  "\\p [i]       port (0 turns off)";
  "\\P [7]       print digits(0-all)";
+ "\\r           replication master";
  "\\r old new   unix mv ";
  "\\s           number of slaves (query only) ";
  "\\S [-314159] seed";
  "\\t [i]       timer [x] milliseconds (1st fire after delay)";
- "\\t expr      time expression ";
+ "\\t expr      time for expression ";
+ "\\ts expr     time and space for expression";
  "\\T [i]       timeout [x] seconds ";
  "\\u           reload the user:pswd file specified with -u";
- "\\v [d]       variables [directory]";
+ "\\v [n]       variables [namespace]";
  "\\w           workspace (bytes allocated; available bytes in heap; max heap so far;";
  "                        max bytes available; mapped bytes; physical memory)";
  "             (max bytes set by -w, 0 => unlimited) - see .Q.w[]";
  "\\w 0         count symbols defined, symbol space used (bytes)";
  "\\W [2]       week offset(sat..fri)";
  "\\x .z.p?     expunge .z.zd or .z.p? value (ie reset to default)";
- "\\z [0]       \"D\"$ uses mm/dd/yyyy or dd/mm/yyyy";
+ "\\z [0|1]    \"D\"$ uses mm/dd/yyyy (0) or dd/mm/yyyy (1)";
  "\\cd [d]      O/S directory [go to]";
  "\\_           is readonly (cmdline -b)";
  "\\_ f.q       create runtime script f.q_ from f.q (or f.k_ from f.k) ";
@@ -418,7 +422,7 @@ TXT,:(enlist`verbs)!enlist(
  "i_l  drop     _a floor    sc(lower)";
  "x~x  match    ~a not      ~s(hdelete)";
  "l!l  xkey     !d key      !i (s;();S):!s";
- "A?a  find     ?l distinct rand([n]?bxhijefcs)";
+ "A?a  find     ?l distinct rand([n]?bgxhijefcs)";
  "x@i  at   s@  @x type          trap amend(:+-*%&|,)";
  "x.l  dot  s.  .d value    .sCL trap dmend(:+-*%&|,)";
  "A bin a;a in A;a within(a;a);sC like C;sC ss sC";
