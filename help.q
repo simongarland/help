@@ -1,4 +1,4 @@
-/ help.q 2012.06.07T06:44:23.364
+/ help.q 2012.06.26T12:12:02.407
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -224,6 +224,7 @@ TXT,:(enlist`errors)!enlist(
  "nyi                      not yet implemented";
  "noamend                  can't change global state inside an amend";
  "noupdate                 update not allowed when using negative port number";
+ "nosocket                 can only open/use sockets in main thread ";
  "os                       operating system error";
  "parse                    invalid syntax";
  "part                     something wrong with the partitions in the hdb";
