@@ -23,6 +23,7 @@ n----wrapper-----------------------------------------------------------
 -17!         read0 kdb+ file x from "other" endian 
 -18!         compressed version of -8!
 -19!         compress file (`:infile;`:outfile;blockSize;algo;zipLevel)
+                           (  data  ;`:outfile;blockSize;algo;zipLevel)
 -20! .Q.gc   garbage collect
 -21!         compression information for file x
 -22!         shortcut for count -8!x 

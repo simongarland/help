@@ -1,4 +1,4 @@
-/ help.q 2012.06.26T12:12:02.407
+/ help.q 2012.08.10T06:30:36.938
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -329,6 +329,7 @@ TXT,:(enlist`negbang)!enlist(
  "-17!         read0 kdb+ file x from \"other\" endian ";
  "-18!         compressed version of -8!";
  "-19!         compress file (`:infile;`:outfile;blockSize;algo;zipLevel)";
+ "                           (  data  ;`:outfile;blockSize;algo;zipLevel)";
  "-20! .Q.gc   garbage collect";
  "-21!         compression information for file x";
  "-22!         shortcut for count -8!x "
