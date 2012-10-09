@@ -7,7 +7,8 @@ f load script (*.q, *.k, *.s), file or directory
 -b               block client write access 
 -c r c           console maxRows maxCols
 -C r c           http display maxRows maxCols 
--g 1             enable immediate garbage collect
+-e [0|1]         error trap clients
+-g [0|1]         enable immediate garbage collect
 -l               log updates to filesystem 
 -L               as -l, but sync logging
 -o N             offset hours (from GMT: affects .z.Z)

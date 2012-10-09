@@ -1,4 +1,4 @@
-/ help.q 2012.08.10T06:30:36.938
+/ help.q 2012.10.09T14:00:41.301
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -36,7 +36,8 @@ TXT,:(enlist`cmdline)!enlist(
  "-b               block client write access ";
  "-c r c           console maxRows maxCols";
  "-C r c           http display maxRows maxCols ";
- "-g 1             enable immediate garbage collect";
+ "-e [0|1]         error trap clients";
+ "-g [0|1]         enable immediate garbage collect";
  "-l               log updates to filesystem ";
  "-L               as -l, but sync logging";
  "-o N             offset hours (from GMT: affects .z.Z)";
@@ -283,11 +284,11 @@ TXT,:(enlist`ipc)!enlist(
  "hclose h      / close a connection to another q session";
  "";
  "h x and neg[h]x - x is any valid argument to <value>";
- "h x           / sync message send AND block until response message received";
- "neg[h] x      / queue an async message for sending";
- "h\"\"           / sends an empty char vector request AND blocks until response message received";
- "neg[h][]      / blocks until all data pending to be sent on h has been written into the socket";
- "h[] or h(::)  / flushes outgoing AND blocks until any message received";
+ "h x                    / sync message send AND block until response message received";
+ "neg[h] x               / queue an async message for sending";
+ "h\"\"                    / sends an empty char vector request AND blocks until response message received";
+ "neg[h][] or neg[h](::) / blocks until all data pending to be sent on h has been written into the socket";
+ "h[] or h(::)           / flushes outgoing AND blocks until any message received";
  "";
  "within a .z.p? callback .z.a, .z.u and .z.w refer to the CLIENT"
  )
