@@ -18,6 +18,7 @@ f load script (*.q, *.k, *.s), file or directory
 -q               quiet, no startup banner text
 -r :H:P          replicate from :host:port 
 -s N             slaves for parallel execution
+-S N             set random seed
 -t N             timer milliseconds
 -T N             timeout seconds(applies to all client queries)
 -u F             usr:pwd file, no access above start directory

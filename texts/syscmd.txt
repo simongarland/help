@@ -17,7 +17,7 @@ system commands
 \r           replication master
 \r old new   unix mv 
 \s           number of slaves (query only) 
-\S [-314159] seed
+\S [-314159] random seed
 \t [i]       timer [x] milliseconds (1st fire after delay)
 \t expr      time for expression 
 \ts expr     time and space for expression

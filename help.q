@@ -1,4 +1,4 @@
-/ help.q 2012.10.09T14:00:41.301
+/ help.q 2012.10.09T16:19:13.749
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -47,6 +47,7 @@ TXT,:(enlist`cmdline)!enlist(
  "-q               quiet, no startup banner text";
  "-r :H:P          replicate from :host:port ";
  "-s N             slaves for parallel execution";
+ "-S N             set random seed";
  "-t N             timer milliseconds";
  "-T N             timeout seconds(applies to all client queries)";
  "-u F             usr:pwd file, no access above start directory";
@@ -365,7 +366,7 @@ TXT,:(enlist`syscmd)!enlist(
  "\\r           replication master";
  "\\r old new   unix mv ";
  "\\s           number of slaves (query only) ";
- "\\S [-314159] seed";
+ "\\S [-314159] random seed";
  "\\t [i]       timer [x] milliseconds (1st fire after delay)";
  "\\t expr      time for expression ";
  "\\ts expr     time and space for expression";
