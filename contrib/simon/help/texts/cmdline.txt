@@ -11,7 +11,7 @@ f load script (*.q, *.k, *.s), file or directory
 -g [0|1]         enable immediate garbage collect
 -l               log updates to filesystem 
 -L               as -l, but sync logging
--o N             offset hours (from GMT: affects .z.Z)
+-o N             offset hours (from GMT: affects .z.Z/T/P/N)
 -p N             port kdbc(/jdbc/odbc) http(html xml txt csv)
 -p -N            port multithreaded kdbc
 -P N             printdigits, default 7, 0=>all
@@ -26,4 +26,4 @@ f load script (*.q, *.k, *.s), file or directory
 -U F             as -u, but no file restrictions
 -w N             workspace MB limit (default: 2*RAM)
 -W N             week offset, default 2, 0=>saturday
--z B             "D" uses 0:mm/dd/yyyy or 1:dd/mm/yyyy, default 0
+-z [0|1]         "D" uses 0:mm/dd/yyyy or 1:dd/mm/yyyy, default 0
