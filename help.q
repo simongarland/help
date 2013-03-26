@@ -1,4 +1,4 @@
-/ help.q 2012.10.09T16:19:13.749
+/ help.q 2013.03.26T07:28:19.504
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -40,7 +40,7 @@ TXT,:(enlist`cmdline)!enlist(
  "-g [0|1]         enable immediate garbage collect";
  "-l               log updates to filesystem ";
  "-L               as -l, but sync logging";
- "-o N             offset hours (from GMT: affects .z.Z)";
+ "-o N             offset hours (from GMT: affects .z.Z/T/P/N)";
  "-p N             port kdbc(/jdbc/odbc) http(html xml txt csv)";
  "-p -N            port multithreaded kdbc";
  "-P N             printdigits, default 7, 0=>all";
@@ -55,7 +55,7 @@ TXT,:(enlist`cmdline)!enlist(
  "-U F             as -u, but no file restrictions";
  "-w N             workspace MB limit (default: 2*RAM)";
  "-W N             week offset, default 2, 0=>saturday";
- "-z B             \"D\" uses 0:mm/dd/yyyy or 1:dd/mm/yyyy, default 0"
+ "-z [0|1]         \"D\" uses 0:mm/dd/yyyy or 1:dd/mm/yyyy, default 0"
  )
 DIR,:(enlist`cmdline)!enlist`$"command line parameters"
 TXT,:(enlist`data)!enlist(
