@@ -1,4 +1,4 @@
-/ help.q 2013.03.26T07:28:19.504
+/ help.q 2013.06.04T06:56:59.590
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -36,11 +36,11 @@ TXT,:(enlist`cmdline)!enlist(
  "-b               block client write access ";
  "-c r c           console maxRows maxCols";
  "-C r c           http display maxRows maxCols ";
- "-e [0|1]         error trap clients";
- "-g [0|1]         enable immediate garbage collect";
+ "-e [0|1]         disable|enable error trap clients";
+ "-g [0|1]         disable|enable immediate garbage collect, default 0";
  "-l               log updates to filesystem ";
  "-L               as -l, but sync logging";
- "-o N             offset hours (from GMT: affects .z.Z/T/P/N)";
+ "-o N             offset hours (from GMT: affects .z.Z/T/P/N), default 0";
  "-p N             port kdbc(/jdbc/odbc) http(html xml txt csv)";
  "-p -N            port multithreaded kdbc";
  "-P N             printdigits, default 7, 0=>all";
@@ -48,10 +48,10 @@ TXT,:(enlist`cmdline)!enlist(
  "-r :H:P          replicate from :host:port ";
  "-s N             slaves for parallel execution";
  "-S N             set random seed";
- "-t N             timer milliseconds";
- "-T N             timeout seconds(applies to all client queries)";
+ "-t N             timer milliseconds, default 0 (=> none)";
+ "-T N             timeout seconds(applies to all client queries), default 0 (=> none)";
  "-u F             usr:pwd file, no access above start directory";
- "-u 1             disable system escapes";
+ "-u [0|1]         enable|disable system escapes";
  "-U F             as -u, but no file restrictions";
  "-w N             workspace MB limit (default: 2*RAM)";
  "-W N             week offset, default 2, 0=>saturday";
