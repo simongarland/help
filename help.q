@@ -1,4 +1,4 @@
-/ help.q 2013.06.04T06:56:59.590
+/ help.q 2013.09.30T06:26:32.493
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -159,8 +159,8 @@ TXT,:(enlist`dotz)!enlist(
  ".z.n       utc timespan ";
  ".z.N       local timespan";
  ".z.o       OS ";
- ".z.p       utc timetamp";
- ".z.P       local timetamp ";
+ ".z.p       utc timestamp";
+ ".z.P       local timestamp ";
  ".z.pc[h]   close, h handle (already closed)";
  ".z.pg[x]   get";
  ".z.ph[x]   http get";
