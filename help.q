@@ -1,4 +1,4 @@
-/ help.q 2013.09.30T06:26:32.493
+/ help.q 2013.10.01T08:33:00.173
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -360,7 +360,8 @@ TXT,:(enlist`syscmd)!enlist(
  "\\f [n]       functions [namespace]";
  "\\g [0|1]     garbage collection mode ";
  "\\l [f]       load script (or dir:files splays parts scripts)";
- "\\o [N]      offset from gmt";
+ "\\l .         (re)load data only, ignore any scripts  ";
+ "\\o [N]       offset from gmt";
  "\\p [i]       port (0 turns off)";
  "\\P [7]       print digits(0-all)";
  "\\r           replication master";
