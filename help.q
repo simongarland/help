@@ -1,4 +1,4 @@
-/ help.q 2013.10.01T08:33:00.173
+/ help.q 2013.10.02T07:41:31.831
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -215,14 +215,14 @@ TXT,:(enlist`errors)!enlist(
  "domain       !-1         out of domain";
  "elim                     more than 57 distinct enumerations ";
  "from         select a b  badly formed select statement";
- "glim                     `g# limit, kdb+ currently limited to 99 concurrent `g#'s ";
+ "glim                     limit on number of vectors with a `g# attribute, currently 65530";
  "hwr                      handle write error, can't write inside a peach";
  "insert                   attempt to insert a record with a key that already exists ";
  "length       ()+!1       incompatible lengths";
  "limit        0W#2        tried to generate a list longer than 2,000,000,000           ";
  "loop         a::a        dependency or transitive closure loop";
  "mismatch                 columns that can't be aligned for R,R or K,K ";
- "Mlim                     more than 999 nested columns in splayed tables";
+ "mlim                     limit on number of concurrently mapped nested vectors, currently 65530";
  "nyi                      not yet implemented";
  "noamend                  can't change global state inside an amend";
  "noupdate                 update not allowed when using negative port number";
@@ -238,7 +238,7 @@ TXT,:(enlist`errors)!enlist(
  "splay                    nyi op on splayed table";
  "stack        {.z.s[]}[]  ran out of stack space";
  "step                     attempt to upsert into stepped (`s#) dictionary ";
- "stop        \t         user interrupt(ctrl-c) or time limit (-T)";
+ "stop        \t           user interrupt(ctrl-c) or time limit (-T)";
  "stype        '42         invalid type used to signal";
  "trunc                    the log had a partial transaction at the end but q couldn't truncate the file.";
  "type         til 2.2     wrong type";
