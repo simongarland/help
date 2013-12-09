@@ -1,4 +1,4 @@
-/ help.q 2013.10.02T07:41:31.831
+/ help.q 2013.12.09T17:16:11.724
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -307,7 +307,7 @@ TXT,:(enlist`lic)!enlist(
  )
 DIR,:(enlist`lic)!enlist`$"licenses - kdb+ license files "
 TXT,:(enlist`negbang)!enlist(
- "n----wrapper-----------------------------------------------------------";
+ "--n--wrapper-----------------------------------------------------------";
  " 0N!         tee, output and return x";
  " -1! hsym    handle from sym x - ensures prefixed with :";
  " -2! attr    attributes of x";
@@ -334,7 +334,8 @@ TXT,:(enlist`negbang)!enlist(
  "                           (  data  ;`:outfile;blockSize;algo;zipLevel)";
  "-20! .Q.gc   garbage collect";
  "-21!         compression information for file x";
- "-22!         shortcut for count -8!x "
+ "-22!         optimised shortcut for count -8!x ";
+ "-23!         map data into memory without copying "
  )
 DIR,:(enlist`negbang)!enlist`$"negative bang - -n!x - system calls"
 TXT,:(enlist`save)!enlist(

@@ -1,5 +1,5 @@
 negative bang - -n!x - system calls
-n----wrapper-----------------------------------------------------------
+--n--wrapper-----------------------------------------------------------
  0N!         tee, output and return x
  -1! hsym    handle from sym x - ensures prefixed with :
  -2! attr    attributes of x
@@ -26,4 +26,5 @@ n----wrapper-----------------------------------------------------------
                            (  data  ;`:outfile;blockSize;algo;zipLevel)
 -20! .Q.gc   garbage collect
 -21!         compression information for file x
--22!         shortcut for count -8!x 
+-22!         optimised shortcut for count -8!x 
+-23!         map data into memory without copying 
