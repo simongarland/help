@@ -1,4 +1,4 @@
-/ help.q 2013.12.09T17:16:11.724
+/ help.q 2014.04.29T08:44:53.301
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -240,6 +240,7 @@ TXT,:(enlist`errors)!enlist(
  "step                     attempt to upsert into stepped (`s#) dictionary ";
  "stop        \t           user interrupt(ctrl-c) or time limit (-T)";
  "stype        '42         invalid type used to signal";
+ "threadview               views can only be calculated from the main thread";
  "trunc                    the log had a partial transaction at the end but q couldn't truncate the file.";
  "type         til 2.2     wrong type";
  "u-fail       `u#1 1      cannot apply `u# to data (not unique values)";
