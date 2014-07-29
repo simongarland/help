@@ -1,4 +1,4 @@
-/ help.q 2014.04.29T08:44:53.301
+/ help.q 2014.07.29T15:59:58.008
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -206,6 +206,7 @@ TXT,:(enlist`errors)!enlist(
  "error--------example-----explanation";
  "access                   attempt to read files above directory, run system commands or failed usr/pwd";
  "accp                     tried to accept an incoming tcp/ip connection but failed to do so";
+ "adict        d[::]:x     blocked assignment ('nyi) ";
  "arch                     attempt to load file of wrong endian format";
  "assign       cos:12      attempt to reuse a reserved word";
  "badtail                  incomplete transaction at end of logfile, get good (count;length) with -11!(-2;`:file)";
