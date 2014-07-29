@@ -3,6 +3,7 @@ runtime errors
 error--------example-----explanation
 access                   attempt to read files above directory, run system commands or failed usr/pwd
 accp                     tried to accept an incoming tcp/ip connection but failed to do so
+adict        d[::]:x     blocked assignment ('nyi) 
 arch                     attempt to load file of wrong endian format
 assign       cos:12      attempt to reuse a reserved word
 badtail                  incomplete transaction at end of logfile, get good (count;length) with -11!(-2;`:file)
