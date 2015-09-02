@@ -1,4 +1,4 @@
-/ help.q 2014.07.29T15:59:58.008
+/ help.q 2015.09.02T11:36:04.074
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -216,7 +216,7 @@ TXT,:(enlist`errors)!enlist(
  "domain       !-1         out of domain";
  "elim                     more than 57 distinct enumerations ";
  "from         select a b  badly formed select statement";
- "glim                     limit on number of vectors with a `g# attribute, currently 65530";
+ "glim                     limit on number of vectors with a `g# attribute, unlimited since 3.2 ";
  "hwr                      handle write error, can't write inside a peach";
  "insert                   attempt to insert a record with a key that already exists ";
  "length       ()+!1       incompatible lengths";
@@ -277,25 +277,6 @@ TXT,:(enlist`errors)!enlist(
  "wha                      invalid system date"
  )
 DIR,:(enlist`errors)!enlist`$"error messages"
-TXT,:(enlist`ipc)!enlist(
- "hsym x        / prefix : to a symbol if required";
- "h:hopen port  / open a connection to another q session (with timeout NNN ms)";
- "        `::port";
- "        `:host:port";
- "        `:host:port:user:pswd";
- "        (`:host:port[:user:pswd];NNN)";
- "hclose h      / close a connection to another q session";
- "";
- "h x and neg[h]x - x is any valid argument to <value>";
- "h x                    / sync message send AND block until response message received";
- "neg[h] x               / queue an async message for sending";
- "h\"\"                    / sends an empty char vector request AND blocks until response message received";
- "neg[h][] or neg[h](::) / blocks until all data pending to be sent on h has been written into the socket";
- "h[] or h(::)           / flushes outgoing AND blocks until any message received";
- "";
- "within a .z.p? callback .z.a, .z.u and .z.w refer to the CLIENT"
- )
-DIR,:(enlist`ipc)!enlist`$"ipc handles"
 TXT,:(enlist`lic)!enlist(
  "The locations for the license file k4.lic are:";
  "    the q directory ";
@@ -337,7 +318,8 @@ TXT,:(enlist`negbang)!enlist(
  "-20! .Q.gc   garbage collect";
  "-21!         compression information for file x";
  "-22!         optimised shortcut for count -8!x ";
- "-23!         map data into memory without copying "
+ "-23!         map data into memory without copying ";
+ "-24! parse   like -5!, but in read-only mode "
  )
 DIR,:(enlist`negbang)!enlist`$"negative bang - -n!x - system calls"
 TXT,:(enlist`save)!enlist(

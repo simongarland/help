@@ -28,3 +28,4 @@ negative bang - -n!x - system calls
 -21!         compression information for file x
 -22!         optimised shortcut for count -8!x 
 -23!         map data into memory without copying 
+-24! parse   like -5!, but in read-only mode 
