@@ -1,4 +1,4 @@
-/ help.q 2015.09.02T11:36:04.074
+/ help.q 2016.09.28T15:57:26.402
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -111,6 +111,16 @@ TXT,:(enlist`data)!enlist(
  "timestamp.(date datetime dd hh minute mm month second ss time timespan uu week year) / .z.p"
  )
 DIR,:(enlist`data)!enlist`$"data types"
+TXT,:(enlist`debug)!enlist(
+ " `     browse the stack frame above";
+ " .     browse the stack frame below";
+ " 'str  throw str from the innermost stack frame";
+ " .z.ex .z.ey  (set in the debugger) the failing primitive and its arglist, if available";
+ ".Q.bt[]        print current stack trace (list of stack frames)";
+ ".Q.pbt[x]      format a stack trace x";
+ ".Q.trp[f;x;g]  like @(trap), but g's second argument is a stack trace: g[error symbol;stack trace]"
+ )
+DIR,:(enlist`debug)!enlist`$"debug - debugger commands"
 TXT,:(enlist`define)!enlist(
  "Dyad------------D-Amend---------Monad-----------M-amend------";
  "v:y             .[`v;();:;y]";
