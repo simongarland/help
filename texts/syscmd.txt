@@ -7,7 +7,7 @@ system commands
 \c [23 79]   console height,width
 \C [36 2000] browser height,width
 \d [n]       q namespace/directory [go to]
-\e [0|1]     error trap clients
+\e [0|1|2]   error trap clients 0=off|1=on|2=display
 \f [n]       functions [namespace]
 \g [0|1]     garbage collection mode 
 \l [f]       load script (or dir:files splays parts scripts)

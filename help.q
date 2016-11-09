@@ -1,4 +1,4 @@
-/ help.q 2016.09.28T15:57:26.402
+/ help.q 2016.11.09T11:00:38.831
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -36,7 +36,7 @@ TXT,:(enlist`cmdline)!enlist(
  "-b               block client write access ";
  "-c r c           console maxRows maxCols";
  "-C r c           http display maxRows maxCols ";
- "-e [0|1]         disable|enable error trap clients";
+ "-e [0|1|2]       disable|enable|display error trap clients";
  "-g [0|1]         disable|enable immediate garbage collect, default 0";
  "-l               log updates to filesystem ";
  "-L               as -l, but sync logging";
@@ -329,7 +329,11 @@ TXT,:(enlist`negbang)!enlist(
  "-21!         compression information for file x";
  "-22!         optimised shortcut for count -8!x ";
  "-23!         map data into memory without copying ";
- "-24! parse   like -5!, but in read-only mode "
+ "-24! parse   like -5!, but in read-only mode ";
+ "-25!(handles;msg) async broadcast <msg> to multiple handles";
+ "-26!()       TLS settings for current process";
+ "-26!handle   TLS settings for handle";
+ "-29!x        json support internal"
  )
 DIR,:(enlist`negbang)!enlist`$"negative bang - -n!x - system calls"
 TXT,:(enlist`save)!enlist(
@@ -351,7 +355,7 @@ TXT,:(enlist`syscmd)!enlist(
  "\\c [23 79]   console height,width";
  "\\C [36 2000] browser height,width";
  "\\d [n]       q namespace/directory [go to]";
- "\\e [0|1]     error trap clients";
+ "\\e [0|1|2]   error trap clients 0=off|1=on|2=display";
  "\\f [n]       functions [namespace]";
  "\\g [0|1]     garbage collection mode ";
  "\\l [f]       load script (or dir:files splays parts scripts)";

@@ -7,7 +7,7 @@ f load script (*.q, *.k, *.s), file or directory
 -b               block client write access 
 -c r c           console maxRows maxCols
 -C r c           http display maxRows maxCols 
--e [0|1]         disable|enable error trap clients
+-e [0|1|2]       disable|enable|display error trap clients
 -g [0|1]         disable|enable immediate garbage collect, default 0
 -l               log updates to filesystem 
 -L               as -l, but sync logging
