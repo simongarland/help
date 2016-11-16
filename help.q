@@ -1,4 +1,4 @@
-/ help.q 2016.11.09T11:00:38.831
+/ help.q 2016.11.16T14:55:09.471
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -159,7 +159,10 @@ TXT,:(enlist`dotz)!enlist(
  ".z.c       physical core count";
  ".z.d       utc date";
  ".z.D       local date";
+ ".z.e       TLS connection status";
  ".z.exit    callback on exit ";
+ ".z.ex      (in debugger) failing primitive";
+ ".z.ey      (in debugger) failing primitive's arglist";
  ".z.f       startup file";
  ".z.h       hostname";
  ".z.i       pid";
@@ -187,9 +190,12 @@ TXT,:(enlist`dotz)!enlist(
  ".z.u       userid ";
  ".z.vs[v;i] value set";
  ".z.w       handle (0 for console, handle to remote for KIPC)";
+ ".z.wc[h]   websocket close";
+ ".z.wo[h]   websocket open ";
  ".z.ws[x]   callback for websockets ";
  ".z.W       openHandles!vectorOfMessageSizes (oldest first)";
  ".z.x       command line parameters (argc..)";
+ ".z.X       raw command line ";
  ".z.z       utc timestamp";
  ".z.zd      default compression for set (blockSize;algo;zipLevel)";
  ".z.Z       local timestamp"
