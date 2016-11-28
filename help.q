@@ -1,4 +1,4 @@
-/ help.q 2016.11.16T14:55:09.471
+/ help.q 2016.11.28T21:39:47.519
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -293,6 +293,17 @@ TXT,:(enlist`errors)!enlist(
  "wha                      invalid system date"
  )
 DIR,:(enlist`errors)!enlist`$"error messages"
+TXT,:(enlist`kill)!enlist(
+ "If it is responsive and listening on a port, you can try connecting to it via ipc and calling \"exit 0\".";
+ "";
+ "kill -9 pid results in an ungraceful exit, and should be used as a last resort.";
+ "If kdb+ is responsive, send it SIGTERM, e.g. kill pid";
+ "If it is not responsive, send SIGINT, then SIGTERM.";
+ "If that doesn't work, and you really have to, then kill -9 pid.";
+ "";
+ "the pid of a q process is .z.i "
+ )
+DIR,:(enlist`kill)!enlist`$"kill - killing a q session"
 TXT,:(enlist`lic)!enlist(
  "The locations for the license file k4.lic are:";
  "    the q directory ";
