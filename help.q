@@ -1,4 +1,4 @@
-/ help.q 2016.11.28T21:43:00.268
+/ help.q 2017.03.23T18:18:00.655
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -117,7 +117,7 @@ TXT,:(enlist`debug)!enlist(
  " 'str  throw str from the innermost stack frame";
  " .z.ex .z.ey  (set in the debugger) the failing primitive and its arglist, if available";
  ".Q.bt[]        print current stack trace (list of stack frames)";
- ".Q.pbt[x]      format a stack trace x";
+ ".Q.sbt[x]      format a stack trace (stringify back trace)";
  ".Q.trp[f;x;g]  like @(trap), but g's second argument is a stack trace: g[error symbol;stack trace]"
  )
 DIR,:(enlist`debug)!enlist`$"debug - debugger commands"

@@ -4,5 +4,5 @@ debug - debugger commands
  'str  throw str from the innermost stack frame
  .z.ex .z.ey  (set in the debugger) the failing primitive and its arglist, if available
 .Q.bt[]        print current stack trace (list of stack frames)
-.Q.pbt[x]      format a stack trace x
+.Q.sbt[x]      format a stack trace (stringify back trace)
 .Q.trp[f;x;g]  like @(trap), but g's second argument is a stack trace: g[error symbol;stack trace]
