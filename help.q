@@ -1,4 +1,4 @@
-/ help.q 2017.03.23T18:18:00.655
+/ help.q 2017.04.06T14:38:50.409
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -112,6 +112,7 @@ TXT,:(enlist`data)!enlist(
  )
 DIR,:(enlist`data)!enlist`$"data types"
 TXT,:(enlist`debug)!enlist(
+ " :.    return from debug mode ";
  " `     browse the stack frame above";
  " .     browse the stack frame below";
  " 'str  throw str from the innermost stack frame";

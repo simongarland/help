@@ -1,4 +1,5 @@
 debug - debugger commands
+ :.    return from debug mode 
  `     browse the stack frame above
  .     browse the stack frame below
  'str  throw str from the innermost stack frame
