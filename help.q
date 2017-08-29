@@ -1,4 +1,4 @@
-/ help.q 2017.04.06T14:38:50.409
+/ help.q 2017.08.29T08:09:14.247
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -348,7 +348,7 @@ TXT,:(enlist`negbang)!enlist(
  "-21!         compression information for file x";
  "-22!         optimised shortcut for count -8!x ";
  "-23!         map data into memory without copying ";
- "-24! parse   like -5!, but in read-only mode ";
+ "-24! reval   like -5!, but in read-only mode ";
  "-25!(handles;msg) async broadcast <msg> to multiple handles";
  "-26!()       TLS settings for current process";
  "-26!handle   TLS settings for handle";
