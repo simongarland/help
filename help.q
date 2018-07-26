@@ -1,4 +1,4 @@
-/ help.q 2017.08.29T08:09:14.247
+/ help.q 2018.07.26T12:25:23.112
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -234,6 +234,7 @@ TXT,:(enlist`errors)!enlist(
  "elim                     more than 57 distinct enumerations ";
  "from         select a b  badly formed select statement";
  "glim                     limit on number of vectors with a `g# attribute, unlimited since 3.2 ";
+ "http                     http request attempted to a process running in multithreaded input mode";
  "hwr                      handle write error, can't write inside a peach";
  "insert                   attempt to insert a record with a key that already exists ";
  "length       ()+!1       incompatible lengths";

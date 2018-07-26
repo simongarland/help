@@ -14,6 +14,7 @@ domain       !-1         out of domain
 elim                     more than 57 distinct enumerations 
 from         select a b  badly formed select statement
 glim                     limit on number of vectors with a `g# attribute, unlimited since 3.2 
+http                     http request attempted to a process running in multithreaded input mode
 hwr                      handle write error, can't write inside a peach
 insert                   attempt to insert a record with a key that already exists 
 length       ()+!1       incompatible lengths
