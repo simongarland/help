@@ -1,4 +1,4 @@
-/ help.q 2018.07.26T12:25:23.112
+/ help.q 2019.03.15T07:47:41.682
 \d .help
 DIR:TXT:()!()
 display:{if[not 10h=abs type x;x:string x];$[1=count i:where(key DIR)like x,"*";-1 each TXT[(key DIR)[i]];show DIR];}
@@ -349,11 +349,18 @@ TXT,:(enlist`negbang)!enlist(
  "-21!         compression information for file x";
  "-22!         optimised shortcut for count -8!x ";
  "-23!         map data into memory without copying ";
- "-24! reval   like -5!, but in read-only mode ";
+ "-24! reval   like -6!, but in read-only mode ";
  "-25!(handles;msg) async broadcast <msg> to multiple handles";
  "-26!()       TLS settings for current process";
  "-26!handle   TLS settings for handle";
- "-29!x        json support internal"
+ "-27!(precision;x) more precise, builtin version of .q.f";
+ "-29! .j.k    json support internal";
+ "-30!(::)     deferred sync, currently executing sync message result will be sent later";
+ "-30!(handle;isError;msg) send deferred sync result   ";
+ "-31! .j.j    json support internal";
+ "-32! .Q.btoa b64 encode for string x";
+ "-33! .Q.sha1 sha1 for string x";
+ "-34! .Q.ts   \\ts x  "
  )
 DIR,:(enlist`negbang)!enlist`$"negative bang - -n!x - system calls"
 TXT,:(enlist`save)!enlist(
