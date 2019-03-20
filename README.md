@@ -1,5 +1,5 @@
 # help
-* Online Help for kdb+ *
+*Online Help for kdb+*
 
 this has been folded into https://code.kx.com, use the version there 
 
